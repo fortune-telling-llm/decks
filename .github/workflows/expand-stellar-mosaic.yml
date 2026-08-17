@@ -1,0 +1,61 @@
+name: Expand Stellar Mosaic Tarot descriptions
+
+on:
+  push:
+    branches:
+      - feat/stellar-mosaic-tarot-card-descriptions
+    paths:
+      - .deck-build/READY
+
+permissions:
+  contents: write
+
+jobs:
+  expand:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out branch
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Reassemble and verify payload
+        shell: bash
+        run: |
+          set -euo pipefail
+          cat .deck-build/payload.part-* | base64 --decode > /tmp/stellar-mosaic.tar.xz
+          echo "c42a3c65d2526d27350f28b5b4a989405749500a19583687ad498133e8d6cc2f  /tmp/stellar-mosaic.tar.xz" | sha256sum --check --strict
+
+      - name: Expand and validate card descriptions
+        shell: bash
+        run: |
+          set -euo pipefail
+          tar -xJf /tmp/stellar-mosaic.tar.xz
+          test -f tarot/stellar-mosaic-tarot/1-ace-of-wands.md
+          test -f tarot/stellar-mosaic-tarot/78-the-world.md
+          test -f tarot/stellar-mosaic-tarot/DECK-INFO.md
+          card_count="$(find tarot/stellar-mosaic-tarot -maxdepth 1 -type f -name '[0-9]*.md' | wc -l | tr -d ' ')"
+          test "$card_count" = "78"
+          if grep -RniE 'placeholder|lorem ipsum|(^|[^A-Z])TBD([^A-Z]|$)|(^|[^A-Z])TODO([^A-Z]|$)' tarot/stellar-mosaic-tarot --include='*.md'; then
+            echo 'Placeholder content detected.' >&2
+            exit 1
+          fi
+
+      - name: Remove one-shot build transport
+        shell: bash
+        run: |
+          set -euo pipefail
+          rm -rf .deck-build
+          rm -f .github/workflows/expand-stellar-mosaic.yml
+          rmdir .github/workflows 2>/dev/null || true
+          rmdir .github 2>/dev/null || true
+
+      - name: Commit generated Markdown
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -A
+          git commit -m 'feat: add complete Stellar Mosaic Tarot card descriptions'
+          git push origin HEAD:feat/stellar-mosaic-tarot-card-descriptions
