@@ -24,7 +24,7 @@ jobs:
         run: |
           set -euo pipefail
           cat .deck-build/payload.part-* | base64 --decode > /tmp/stellar-mosaic.tar.xz
-          echo "c42a3c65d2526d27350f28b5b4a989405749500a19583687ad498133e8d6cc2f  /tmp/stellar-mosaic.tar.xz" | sha256sum --check --strict
+          echo "c5dd8815d7c2f80d4d142c3bff6dff251ca225f60800506076bdc71b51f01676  /tmp/stellar-mosaic.tar.xz" | sha256sum --check --strict
 
       - name: Expand and validate card descriptions
         shell: bash
