@@ -8,11 +8,11 @@
 - **Element:** Fire
 - **Repository sequence number:** 25
 - **Formal number:** 3
-- **Printed title:** `THREE of WANDS.`
+- **Printed inscription:** Roman numeral `III` at the top; no printed card title appears on the face
 - **Primary polarity:** expansive, established, expectant, outward-moving
 - **Later esoteric correspondence:** Sun in Aries, traditionally titled Virtue or Established Strength; these attributions are not printed on the card
 - **Core theme:** a venture has moved beyond private intention and entered a wider field where distance, cooperation, trade, and unfolding results can now be observed
-- **Artwork status:** this description targets Pamela Colman Smith’s first 1909 Roses & Lilies design. Any uploaded scan must be checked for edition, cropping, color, restoration, wear, and small print differences before the literal description is treated as synchronized.
+- **Artwork status:** this description targets Pamela Colman Smith’s first 1909 Roses & Lilies design. Any uploaded scan must be checked for edition, cropping, color, restoration, wear, numeral form, and small print differences before the literal description is treated as synchronized.
 
 ## Literal visual description
 
@@ -493,7 +493,7 @@ Maintain the foundation, monitor the field, prepare for what may return, and cre
 - Do not treat a back-turned figure as automatic rejection.
 - Do not assume expansion is ethical or sustainable merely because it is successful.
 - Keep Sun-in-Aries and Virtue identified as later overlays rather than printed evidence.
-- Verify the number of ships, color relationships, clothing, water, and wand placement against the exact 1909 scan selected for the repository.
+- Verify the Roman numeral, number of ships, color relationships, clothing, water, and wand placement against the exact 1909 scan selected for the repository.
 
 ## One-sentence essence
 
