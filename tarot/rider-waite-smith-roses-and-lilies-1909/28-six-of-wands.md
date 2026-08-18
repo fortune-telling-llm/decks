@@ -8,11 +8,11 @@
 - **Element:** Fire
 - **Repository sequence number:** 28
 - **Formal number:** 6
-- **Printed title:** `SIX of WANDS.`
+- **Printed inscription:** Roman numeral `VI` at the top; no printed card title appears on the face
 - **Primary polarity:** visible, victorious, acknowledged, socially elevated
 - **Later esoteric correspondence:** Jupiter in Leo, traditionally titled Victory; these attributions are not printed on the card
 - **Core theme:** effort or identity receives public recognition, creating momentum and influence while testing whether acclaim is supported by substance, loyalty, and continued responsibility
-- **Artwork status:** this description targets Pamela Colman Smith’s first 1909 Roses & Lilies design. Any uploaded scan must be checked for edition, cropping, color, restoration, wear, and small print differences before the literal description is treated as synchronized.
+- **Artwork status:** this description targets Pamela Colman Smith’s first 1909 Roses & Lilies design. Any uploaded scan must be checked for edition, cropping, color, restoration, wear, numeral form, and small print differences before the literal description is treated as synchronized.
 
 ## Literal visual description
 
@@ -469,7 +469,7 @@ The card places one person above a crowd. Visibility can create scrutiny, impost
 - Do not treat public acknowledgment as proof of private commitment.
 - Do not encourage superiority, humiliation of competitors, or dependence on applause.
 - Keep Jupiter-in-Leo and Victory identified as later overlays rather than printed evidence.
-- Verify the horse, garment colors, wreaths, staff count, figures, and title against the exact 1909 scan selected for the repository.
+- Verify the Roman numeral, horse, garment colors, wreaths, staff count, and figures against the exact 1909 scan selected for the repository.
 
 ## One-sentence essence
 
