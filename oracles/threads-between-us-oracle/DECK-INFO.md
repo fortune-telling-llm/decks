@@ -4,7 +4,7 @@
 
 **Deck name:** Threads Between Us Oracle  
 **Deck family:** Oracle  
-**Status:** In development — deck specification and complete 60-card list established; detailed Markdown descriptions exist for cards 1–40  
+**Status:** In development — deck specification and complete 60-card list established; detailed Markdown descriptions exist for cards 1–50  
 **Planned structure:** 60 numbered cards with no suits, arranged as a continuous relational journey from recognition and meeting context through bonding, alignment, friction, boundaries, endings, and changed possibilities  
 **Primary reading style:** image-led intuitive relationship divination that distinguishes who a person may be, how people may know each other, what form a bond is taking, how compatible its energies are, what purpose it may serve, and where the present pattern is likely to lead.
 
@@ -160,9 +160,9 @@ The current deck folder contains:
 
 - `DECK-INFO.md` — the deck identity, visual system, reading method, and card-file standard;
 - `CARDS.md` — the authoritative planned 60-card sequence and short descriptions;
-- detailed individual Markdown descriptions for cards **1–40**.
+- detailed individual Markdown descriptions for cards **1–50**.
 
-Cards **41–60** do not yet have individual card-specific Markdown files. Artwork files are produced and managed independently and may be added, replaced, or removed while the card descriptions are being developed.
+Cards **51–60** do not yet have individual card-specific Markdown files. Artwork files are produced and managed independently and may be added, replaced, or removed while the card descriptions are being developed.
 
 Current card-description files:
 
@@ -206,6 +206,16 @@ Current card-description files:
 - `38-the-masked-ball.md`
 - `39-the-glass-wall.md`
 - `40-the-locked-room.md`
+- `41-the-closed-gate.md`
+- `42-the-wrong-key.md`
+- `43-different-seasons.md`
+- `44-crossed-wires.md`
+- `45-the-dissonant-chord.md`
+- `46-the-grinding-stones.md`
+- `47-the-empty-cup.md`
+- `48-the-tangled-thread.md`
+- `49-the-leaking-roof.md`
+- `50-the-scales.md`
 
 Each completed card should ultimately be represented by:
 
