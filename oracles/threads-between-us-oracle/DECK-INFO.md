@@ -4,7 +4,7 @@
 
 **Deck name:** Threads Between Us Oracle  
 **Deck family:** Oracle  
-**Status:** In development — deck specification and complete 60-card list established; detailed Markdown descriptions exist for cards 1–10; no artwork yet  
+**Status:** In development — deck specification and complete 60-card list established; detailed Markdown descriptions exist for cards 1–10; one provisional SVG artwork file exists for card 1  
 **Planned structure:** 60 numbered cards with no suits, arranged as a continuous relational journey from recognition and meeting context through bonding, alignment, friction, boundaries, endings, and changed possibilities  
 **Primary reading style:** image-led intuitive relationship divination that distinguishes who a person may be, how people may know each other, what form a bond is taking, how compatible its energies are, what purpose it may serve, and where the present pattern is likely to lead.
 
@@ -160,9 +160,10 @@ The current deck folder contains:
 
 - `DECK-INFO.md` — the deck identity, visual system, reading method, and card-file standard;
 - `CARDS.md` — the authoritative planned 60-card sequence and short descriptions;
-- detailed individual Markdown descriptions for cards **1–10**.
+- detailed individual Markdown descriptions for cards **1–10**;
+- `1-the-first-spark.svg` — provisional vector artwork added separately; it is not the final `.jpg` file required by the deck convention.
 
-No card artwork exists yet. Cards **11–60** do not yet have individual card-specific Markdown files.
+One provisional SVG artwork file exists for card **1**. No final `.jpg` artwork exists, and cards **2–60** have no artwork. Cards **11–60** do not yet have individual card-specific Markdown files.
 
 Current card-description files:
 
@@ -177,7 +178,7 @@ Current card-description files:
 - `9-the-workshop.md`
 - `10-the-name-badge.md`
 
-When artwork production begins, each completed card should be represented by:
+When final artwork production begins, each completed card should be represented by:
 
 - a numbered `.jpg` containing the artwork;
 - a matching numbered `.md` containing a literal visual inventory plus detailed symbolic and divinatory interpretation.
@@ -219,12 +220,12 @@ Oracle-specific card metadata should include at least:
 - **Core theme**
 - **Artwork status**
 
-Until artwork exists, each card's literal visual description is an authoritative generation target rather than a claim that a finished image has already been inspected. After image generation, every visual description and interpretation must be checked and revised wherever the final artwork differs.
+Until final artwork exists, each card's literal visual description is an authoritative generation target rather than a claim that a final image has already been inspected. The provisional card 1 SVG must be reviewed against `1-the-first-spark.md` before it is approved or used as the basis for final artwork. After any image is finalized, every visual description and interpretation must be checked and revised wherever the artwork differs.
 
 The card Markdown must be detailed enough that a model can reason about the artwork when direct image access is unavailable, while direct image inspection remains preferred whenever possible.
 
 ## Artwork provenance
 
-No artwork has been created for this deck yet.
+One provisional SVG artwork file currently exists for **The First Spark**. It was added separately in commit `3bab93d2f8316b74b9443e30b70799d20e5449a0`; no final `.jpg` artwork exists yet.
 
-Future artwork should be original AI-generated imagery created specifically for Threads Between Us Oracle. The accompanying descriptions and interpretations are written for this repository and must evolve together with the artwork so that every visual claim remains synchronized with the actual card.
+Future final artwork should be original imagery created specifically for Threads Between Us Oracle. The accompanying descriptions and interpretations are written for this repository and must evolve together with the artwork so that every visual claim remains synchronized with the actual card.
