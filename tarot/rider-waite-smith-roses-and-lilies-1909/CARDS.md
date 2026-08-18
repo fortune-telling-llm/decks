@@ -4,7 +4,7 @@ This file defines the historical **78-card** sequence documented for Rider–Wai
 
 The table uses stable repository sequence numbers while preserving historical card numbers, titles, ranks, and edition-specific exceptions inside the card name or description. Short descriptions identify each card’s primary visual or structural role; they are not substitutes for the detailed image-led card files.
 
-Detailed card-specific Markdown files now exist for cards **1–36**: all **22 Major Arcana** from The Fool through The World and the complete **14-card suit of Wands** from Ace through King. Cards **37–78**, comprising Cups, Swords, and Pentacles, remain index entries awaiting detailed card files. Artwork is produced and managed separately from this Markdown status record.
+Detailed card-specific Markdown files now exist for cards **1–50**: all **22 Major Arcana**, the complete **14-card suit of Wands**, and the complete **14-card suit of Cups**. Cards **51–78**, comprising Swords and Pentacles, remain index entries awaiting detailed card files. Artwork is produced and managed separately from this Markdown status record.
 
 The sequence follows the 22 Major Arcana from `0` through `XXI`, then Wands, Cups, Swords, and Pentacles from Ace through King. Strength is `VIII` and Justice is `XI`, as in Waite’s ordering.
 
@@ -48,20 +48,20 @@ For the original 1909 faces, numbered pip cards `2–10` display Roman numerals 
 | 34 | **Knight of Wands** | An armored rider carries a short flowering wand on a rearing horse; journey, pursuit, relocation, and precipitate momentum. |
 | 35 | **Queen of Wands** | A crowned queen holds wand and sunflower above a black cat; magnetism, confidence, instinct, and creative cultivation. |
 | 36 | **King of Wands** | A crowned ruler holds a flowering staff amid lion and salamander motifs; vision, enterprise, authority, and accountable leadership. |
-| 37 | **Ace of Cups** | A fully illustrated scene: hand presents an overflowing cup beneath a dove; emotional opening, grace, intimacy, and renewal. |
-| 38 | **Two of Cups** | A fully illustrated scene: two figures exchange cups beneath a winged lion; reciprocity, attraction, agreement, and recognition. |
-| 39 | **Three of Cups** | A fully illustrated scene: three figures raise cups in a circle; friendship, celebration, support, and collaboration. |
-| 40 | **Four of Cups** | A fully illustrated scene: seated figure ignores a cup offered from a cloud; withdrawal, dissatisfaction, and overlooked possibility. |
-| 41 | **Five of Cups** | A fully illustrated scene: cloaked figure mourns spilled cups while two remain; grief, regret, and surviving connection. |
-| 42 | **Six of Cups** | A fully illustrated scene: children exchange flower-filled cups; memory, kindness, childhood, return, and familiar affection. |
-| 43 | **Seven of Cups** | A fully illustrated scene: figure faces seven visionary cups; options, fantasy, projection, temptation, and the need to choose. |
-| 44 | **Eight of Cups** | A fully illustrated scene: traveler leaves stacked cups under an eclipsed moon; departure, search, and emotional completion. |
-| 45 | **Nine of Cups** | A fully illustrated scene: seated figure displays nine cups; satisfaction, pleasure, hospitality, and possible complacency. |
-| 46 | **Ten of Cups** | A fully illustrated scene: family celebrates beneath a rainbow of cups; emotional fulfilment, belonging, and shared future. |
-| 47 | **Page of Cups** | A fully illustrated scene: fish rises unexpectedly from a cup; message, imagination, sensitivity, and emotional curiosity. |
-| 48 | **Knight of Cups** | A fully illustrated scene: calm rider offers a cup beside a river; invitation, romance, diplomacy, and emotionally directed movement. |
-| 49 | **Queen of Cups** | A fully illustrated scene: queen contemplates an ornate closed cup by the sea; empathy, intuition, privacy, and emotional depth. |
-| 50 | **King of Cups** | A fully illustrated scene: king sits steady amid turbulent water; emotional authority, diplomacy, and calm within change. |
+| 37 | **Ace of Cups** | A cloud-borne hand supports an overflowing chalice beneath a dove and Host; emotional opening, grace, nourishment, and living flow. |
+| 38 | **Two of Cups** | Two figures exchange equal cups beneath intertwined serpents and a winged lion; reciprocity, attraction, agreement, and activated relationship. |
+| 39 | **Three of Cups** | Three wreath-crowned figures raise cups above a harvest; friendship, celebration, collaboration, support, and shared success. |
+| 40 | **Four of Cups** | A seated figure folds their arms before three cups while a fourth is offered from a cloud; withdrawal, discernment, and overlooked possibility. |
+| 41 | **Five of Cups** | A black-cloaked mourner faces three spilled cups while two stand behind near a river and bridge; grief, regret, and surviving connection. |
+| 42 | **Six of Cups** | A taller figure offers a flower-filled cup to a smaller figure in an old courtyard; memory, kindness, return, and inherited emotional pattern. |
+| 43 | **Seven of Cups** | A silhouetted observer faces seven cloud-borne vessels containing visions; imagination, projection, temptation, options, and verification. |
+| 44 | **Eight of Cups** | A cloaked traveler leaves eight upright cups and walks toward mountains beneath a phased moon; departure, meaning-seeking, and emotional completion. |
+| 45 | **Nine of Cups** | A self-possessed figure sits before nine cups displayed on a draped support; satisfaction, hospitality, pleasure, and self-contained fulfilment. |
+| 46 | **Ten of Cups** | Ten cups arch within a rainbow above two adults, two dancing children, river, and home; belonging, shared future, and emotional integration. |
+| 47 | **Page of Cups** | A fish rises unexpectedly from the cup studied by a brightly dressed Page beside the sea; message, imagination, surprise, and emotional learning. |
+| 48 | **Knight of Cups** | A calm armored rider carries an upright cup beside a winding stream; invitation, proposal, diplomacy, and idealistic approach. |
+| 49 | **Queen of Cups** | A crowned queen studies an ornate enclosed vessel on a carved throne at the shoreline; empathy, privacy, imagination, and bounded receptivity. |
+| 50 | **King of Cups** | A crowned king holds cup and scepter on a throne surrounded by waves, fish, and ship; emotional authority, diplomacy, and accountable care. |
 | 51 | **Ace of Swords** | A fully illustrated scene: hand raises a crowned sword; truth, decision, clarity, conflict, and a cutting beginning. |
 | 52 | **Two of Swords** | A fully illustrated scene: blindfolded figure crosses swords before the sea; stalemate, guarded choice, and balanced tension. |
 | 53 | **Three of Swords** | A fully illustrated scene: three swords pierce a heart beneath rain; grief, painful truth, separation, and mental-emotional wound. |
