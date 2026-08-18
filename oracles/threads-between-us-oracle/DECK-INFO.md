@@ -4,7 +4,7 @@
 
 **Deck name:** Threads Between Us Oracle  
 **Deck family:** Oracle  
-**Status:** In development — deck specification and complete 60-card list established; detailed Markdown descriptions exist for cards 1–50  
+**Status:** In development — deck specification, complete 60-card list, and detailed Markdown descriptions for all cards 1–60 established; artwork remains in development  
 **Planned structure:** 60 numbered cards with no suits, arranged as a continuous relational journey from recognition and meeting context through bonding, alignment, friction, boundaries, endings, and changed possibilities  
 **Primary reading style:** image-led intuitive relationship divination that distinguishes who a person may be, how people may know each other, what form a bond is taking, how compatible its energies are, what purpose it may serve, and where the present pattern is likely to lead.
 
@@ -159,10 +159,10 @@ The question, spread position, artwork, surrounding cards, and real-world facts 
 The current deck folder contains:
 
 - `DECK-INFO.md` — the deck identity, visual system, reading method, and card-file standard;
-- `CARDS.md` — the authoritative planned 60-card sequence and short descriptions;
-- detailed individual Markdown descriptions for cards **1–50**.
+- `CARDS.md` — the authoritative complete 60-card sequence and short descriptions;
+- detailed individual Markdown descriptions for **all cards 1–60**.
 
-Cards **51–60** do not yet have individual card-specific Markdown files. Artwork files are produced and managed independently and may be added, replaced, or removed while the card descriptions are being developed.
+The complete planned Markdown card-description set is present. Artwork files are produced and managed independently and may be added, replaced, or removed while final card artwork is developed.
 
 Current card-description files:
 
@@ -216,6 +216,16 @@ Current card-description files:
 - `48-the-tangled-thread.md`
 - `49-the-leaking-roof.md`
 - `50-the-scales.md`
+- `51-the-mended-seam.md`
+- `52-the-turning-door.md`
+- `53-the-shears.md`
+- `54-the-empty-chair.md`
+- `55-the-witness.md`
+- `56-the-secret-garden.md`
+- `57-the-crossroads.md`
+- `58-the-unwoven-thread.md`
+- `59-the-new-pattern.md`
+- `60-the-horizon.md`
 
 Each completed card should ultimately be represented by:
 
@@ -227,7 +237,7 @@ Examples:
 - `1-the-first-spark.jpg`
 - `1-the-first-spark.md`
 
-Each current and future card Markdown file must follow the same detailed structural standard established by the repository's Stellar Mosaic Tarot card descriptions, adapted to an oracle card. It should contain:
+Each card Markdown file follows the same detailed structural standard established by the repository's Stellar Mosaic Tarot card descriptions, adapted to an oracle card. It contains:
 
 - `# <number> — <card name>`
 - `## Card metadata`
@@ -250,7 +260,7 @@ Each current and future card Markdown file must follow the same detailed structu
 - `## Fortune-teller cautions`
 - `## One-sentence essence`
 
-Oracle-specific card metadata should include at least:
+Oracle-specific card metadata includes at least:
 
 - **Deck**
 - **Formal number**
@@ -261,7 +271,7 @@ Oracle-specific card metadata should include at least:
 
 Until a final image has been inspected, each card's literal visual description is an authoritative generation target rather than a claim about completed artwork. After any image is finalized, every visual description and interpretation must be checked and revised wherever the artwork differs.
 
-The card Markdown must be detailed enough that a model can reason about the artwork when direct image access is unavailable, while direct image inspection remains preferred whenever possible.
+The card Markdown is detailed enough that a model can reason about the artwork when direct image access is unavailable, while direct image inspection remains preferred whenever possible.
 
 ## Artwork provenance
 
