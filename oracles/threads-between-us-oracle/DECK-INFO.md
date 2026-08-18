@@ -4,7 +4,7 @@
 
 **Deck name:** Threads Between Us Oracle  
 **Deck family:** Oracle  
-**Status:** In development — deck specification and card list only; no artwork or individual card files yet  
+**Status:** In development — deck specification and complete 60-card list established; detailed Markdown descriptions exist for cards 1–10; no artwork yet  
 **Planned structure:** 60 numbered cards with no suits, arranged as a continuous relational journey from recognition and meeting context through bonding, alignment, friction, boundaries, endings, and changed possibilities  
 **Primary reading style:** image-led intuitive relationship divination that distinguishes who a person may be, how people may know each other, what form a bond is taking, how compatible its energies are, what purpose it may serve, and where the present pattern is likely to lead.
 
@@ -156,14 +156,28 @@ The question, spread position, artwork, surrounding cards, and real-world facts 
 
 ## File convention
 
-The current deck folder intentionally contains only:
+The current deck folder contains:
 
-- `DECK-INFO.md` — the deck identity, visual system, reading method, and future file standard;
-- `CARDS.md` — the authoritative planned card sequence and short descriptions.
+- `DECK-INFO.md` — the deck identity, visual system, reading method, and card-file standard;
+- `CARDS.md` — the authoritative planned 60-card sequence and short descriptions;
+- detailed individual Markdown descriptions for cards **1–10**.
 
-No card artwork or individual card-specific Markdown files exist yet.
+No card artwork exists yet. Cards **11–60** do not yet have individual card-specific Markdown files.
 
-When card production begins, each card must be represented by:
+Current card-description files:
+
+- `1-the-first-spark.md`
+- `2-the-familiar-flame.md`
+- `3-the-heartward-path.md`
+- `4-the-open-bench.md`
+- `5-the-quiet-harbor.md`
+- `6-the-shared-table.md`
+- `7-the-hearth.md`
+- `8-the-family-tree.md`
+- `9-the-workshop.md`
+- `10-the-name-badge.md`
+
+When artwork production begins, each completed card should be represented by:
 
 - a numbered `.jpg` containing the artwork;
 - a matching numbered `.md` containing a literal visual inventory plus detailed symbolic and divinatory interpretation.
@@ -173,7 +187,7 @@ Examples:
 - `1-the-first-spark.jpg`
 - `1-the-first-spark.md`
 
-Each future card Markdown file must follow the same detailed structural standard established by the repository's Stellar Mosaic Tarot card descriptions, adapted to an oracle card. It should contain:
+Each current and future card Markdown file must follow the same detailed structural standard established by the repository's Stellar Mosaic Tarot card descriptions, adapted to an oracle card. It should contain:
 
 - `# <number> — <card name>`
 - `## Card metadata`
@@ -203,11 +217,14 @@ Oracle-specific card metadata should include at least:
 - **Primary polarity**
 - **Primary relational lenses**
 - **Core theme**
+- **Artwork status**
 
-The card Markdown must be detailed enough that a model can reason about the artwork when direct image access is unavailable, while direct image inspection remains preferred whenever possible. Visual descriptions and interpretations must be revised if the final artwork differs from the plan.
+Until artwork exists, each card's literal visual description is an authoritative generation target rather than a claim that a finished image has already been inspected. After image generation, every visual description and interpretation must be checked and revised wherever the final artwork differs.
+
+The card Markdown must be detailed enough that a model can reason about the artwork when direct image access is unavailable, while direct image inspection remains preferred whenever possible.
 
 ## Artwork provenance
 
 No artwork has been created for this deck yet.
 
-Future artwork should be original AI-generated imagery created specifically for Threads Between Us Oracle. The accompanying descriptions and interpretations must be written for this repository and must evolve together with the artwork so that every visual claim remains synchronized with the actual card.
+Future artwork should be original AI-generated imagery created specifically for Threads Between Us Oracle. The accompanying descriptions and interpretations are written for this repository and must evolve together with the artwork so that every visual claim remains synchronized with the actual card.
