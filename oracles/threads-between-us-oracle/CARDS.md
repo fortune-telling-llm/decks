@@ -1,6 +1,6 @@
 # Threads Between Us Oracle — Cards
 
-This file defines the planned **60-card** sequence for the Threads Between Us Oracle.
+This file defines the complete **60-card** sequence for the Threads Between Us Oracle.
 
 Each card is intentionally multivalent. Depending on the question, spread position, surrounding cards, and eventual artwork, the same card may describe:
 
@@ -10,7 +10,7 @@ Each card is intentionally multivalent. Depending on the question, spread positi
 - the connection's purpose, lesson, boundary, or direction;
 - or the choices that can change what happens next.
 
-These short descriptions are planning summaries, not substitutes for the image-led card files. Detailed card-specific Markdown files now exist for cards **1–50**. Cards **51–60** remain planning entries only. Artwork is produced and managed separately from this card-description index.
+These short descriptions are planning summaries, not substitutes for the image-led card files. Detailed card-specific Markdown files now exist for **all cards 1–60**, completing the planned Markdown card-description set. Artwork is produced and managed separately from this card-description index.
 
 | Number | Card name | Short description |
 |---:|---|---|
