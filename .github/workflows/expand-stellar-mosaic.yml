@@ -6,6 +6,13 @@ on:
       - feat/stellar-mosaic-tarot-card-descriptions
     paths:
       - .deck-build/READY
+  pull_request:
+    branches:
+      - main
+    paths:
+      - .deck-build/READY
+      - .deck-build/payload.part-*
+      - .github/workflows/expand-stellar-mosaic.yml
 
 permissions:
   contents: write
@@ -14,10 +21,11 @@ jobs:
   expand:
     runs-on: ubuntu-latest
     steps:
-      - name: Check out branch
+      - name: Check out feature branch
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
+          ref: ${{ github.head_ref || github.ref_name }}
 
       - name: Recover and verify the staged payload
         shell: bash
