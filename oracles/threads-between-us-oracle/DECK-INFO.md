@@ -4,7 +4,7 @@
 
 **Deck name:** Threads Between Us Oracle  
 **Deck family:** Oracle  
-**Status:** In development — deck specification and complete 60-card list established; detailed Markdown descriptions exist for cards 1–10; one provisional SVG artwork file exists for card 1  
+**Status:** In development — deck specification and complete 60-card list established; detailed Markdown descriptions exist for cards 1–20  
 **Planned structure:** 60 numbered cards with no suits, arranged as a continuous relational journey from recognition and meeting context through bonding, alignment, friction, boundaries, endings, and changed possibilities  
 **Primary reading style:** image-led intuitive relationship divination that distinguishes who a person may be, how people may know each other, what form a bond is taking, how compatible its energies are, what purpose it may serve, and where the present pattern is likely to lead.
 
@@ -160,10 +160,9 @@ The current deck folder contains:
 
 - `DECK-INFO.md` — the deck identity, visual system, reading method, and card-file standard;
 - `CARDS.md` — the authoritative planned 60-card sequence and short descriptions;
-- detailed individual Markdown descriptions for cards **1–10**;
-- `1-the-first-spark.svg` — provisional vector artwork added separately; it is not the final `.jpg` file required by the deck convention.
+- detailed individual Markdown descriptions for cards **1–20**.
 
-One provisional SVG artwork file exists for card **1**. No final `.jpg` artwork exists, and cards **2–60** have no artwork. Cards **11–60** do not yet have individual card-specific Markdown files.
+Cards **21–60** do not yet have individual card-specific Markdown files. Artwork files are produced and managed independently and may be added, replaced, or removed while the card descriptions are being developed.
 
 Current card-description files:
 
@@ -177,8 +176,18 @@ Current card-description files:
 - `8-the-family-tree.md`
 - `9-the-workshop.md`
 - `10-the-name-badge.md`
+- `11-the-lantern-bearer.md`
+- `12-the-waiting-room.md`
+- `13-the-school-bell.md`
+- `14-neighboring-windows.md`
+- `15-the-shared-screen.md`
+- `16-the-suitcase.md`
+- `17-the-invitation.md`
+- `18-the-storm-shelter.md`
+- `19-the-mirror.md`
+- `20-the-rosefire.md`
 
-When final artwork production begins, each completed card should be represented by:
+Each completed card should ultimately be represented by:
 
 - a numbered `.jpg` containing the artwork;
 - a matching numbered `.md` containing a literal visual inventory plus detailed symbolic and divinatory interpretation.
@@ -220,12 +229,12 @@ Oracle-specific card metadata should include at least:
 - **Core theme**
 - **Artwork status**
 
-Until final artwork exists, each card's literal visual description is an authoritative generation target rather than a claim that a final image has already been inspected. The provisional card 1 SVG must be reviewed against `1-the-first-spark.md` before it is approved or used as the basis for final artwork. After any image is finalized, every visual description and interpretation must be checked and revised wherever the artwork differs.
+Until a final image has been inspected, each card's literal visual description is an authoritative generation target rather than a claim about completed artwork. After any image is finalized, every visual description and interpretation must be checked and revised wherever the artwork differs.
 
 The card Markdown must be detailed enough that a model can reason about the artwork when direct image access is unavailable, while direct image inspection remains preferred whenever possible.
 
 ## Artwork provenance
 
-One provisional SVG artwork file currently exists for **The First Spark**. It was added separately in commit `3bab93d2f8316b74b9443e30b70799d20e5449a0`; no final `.jpg` artwork exists yet.
+Artwork is produced separately from the Markdown card-description work and may be added or revised independently on the branch.
 
-Future final artwork should be original imagery created specifically for Threads Between Us Oracle. The accompanying descriptions and interpretations are written for this repository and must evolve together with the artwork so that every visual claim remains synchronized with the actual card.
+Final artwork should be original imagery created specifically for Threads Between Us Oracle. The accompanying descriptions and interpretations are written for this repository and must evolve together with the artwork so that every visual claim remains synchronized with the actual card.
