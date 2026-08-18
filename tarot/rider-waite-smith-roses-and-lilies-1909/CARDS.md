@@ -2,7 +2,9 @@
 
 This file defines the historical **78-card** sequence documented for Rider–Waite–Smith Tarot — Original Roses & Lilies Edition (1909).
 
-The table uses stable repository sequence numbers while preserving historical card numbers, titles, ranks, and edition-specific exceptions inside the card name or description. Short descriptions identify the card’s primary visual or structural role; they are not substitutes for future image-led card files.
+The table uses stable repository sequence numbers while preserving historical card numbers, titles, ranks, and edition-specific exceptions inside the card name or description. Short descriptions identify each card’s primary visual or structural role; they are not substitutes for the detailed image-led card files.
+
+Detailed card-specific Markdown files now exist for cards **1–22**, completing all **22 Major Arcana** from The Fool through The World. Cards **23–78**, the 56 Minor Arcana, remain index entries awaiting detailed card files. Artwork is produced and managed separately from this Markdown status record.
 
 The sequence follows the 22 Major Arcana from `0` through `XXI`, then Wands, Cups, Swords, and Pentacles from Ace through King. Strength is `VIII` and Justice is `XI`, as in Waite’s ordering.
 
