@@ -8,11 +8,11 @@
 - **Element:** Fire
 - **Repository sequence number:** 27
 - **Formal number:** 5
-- **Printed title:** `FIVE of WANDS.`
+- **Printed inscription:** Roman numeral `V` at the top; no printed card title appears on the face
 - **Primary polarity:** competitive, disruptive, testing, uncoordinated
 - **Later esoteric correspondence:** Saturn in Leo, traditionally titled Strife; these attributions are not printed on the card
 - **Core theme:** several active wills occupy the same field without a shared rhythm, producing rehearsal, competition, collision, comparison, or conflict that can either develop skill or waste collective energy
-- **Artwork status:** this description targets Pamela Colman Smith’s first 1909 Roses & Lilies design. Any uploaded scan must be checked for edition, cropping, color, restoration, wear, and small print differences before the literal description is treated as synchronized.
+- **Artwork status:** this description targets Pamela Colman Smith’s first 1909 Roses & Lilies design. Any uploaded scan must be checked for edition, cropping, color, restoration, wear, numeral form, and small print differences before the literal description is treated as synchronized.
 
 ## Literal visual description
 
@@ -472,7 +472,7 @@ The card confirms an active field where skill can develop. Enter when the rules 
 - Do not romanticize bullying, humiliation, or abuse as “growth through conflict.”
 - Preserve Waite’s idea of mimic warfare and strenuous competition without treating gain as guaranteed.
 - Keep Saturn-in-Leo and Strife identified as later overlays rather than printed evidence.
-- Verify clothing colors, wand angles, leaves, footing, and figure count against the exact 1909 scan selected for the repository.
+- Verify the Roman numeral, clothing colors, wand angles, leaves, footing, and figure count against the exact 1909 scan selected for the repository.
 
 ## One-sentence essence
 
