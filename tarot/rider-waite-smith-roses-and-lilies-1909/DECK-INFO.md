@@ -5,7 +5,7 @@
 **Deck name:** Rider–Waite–Smith Tarot — Original Roses & Lilies Edition (1909)  
 **Deck family:** Tarot  
 **Historical edition:** First William Rider & Son issue, London, December 1909, identified by the blue Roses & Lilies back design  
-**Status:** Foundation documented and detailed Markdown descriptions completed for cards 1–36: all 22 Major Arcana and the complete 14-card suit of Wands; Cups, Swords, and Pentacles still await detailed card files; artwork is developed separately  
+**Status:** Foundation documented and detailed Markdown descriptions completed for cards 1–50: all 22 Major Arcana, the complete 14-card suit of Wands, and the complete 14-card suit of Cups; Swords and Pentacles still await detailed card files; artwork is developed separately  
 **Historical structure:** 78 cards: 22 fully illustrated Major Arcana and 56 fully illustrated Minor Arcana; Strength VIII and Justice XI  
 **Primary reading style:** image-led reading of Pamela Colman Smith’s complete scenic sequence, supported by Arthur Edward Waite’s published structure and clearly identified later correspondences
 
@@ -15,7 +15,7 @@ The 1909 Rider–Waite–Smith deck joins Waite’s occult programme with Pamela
 
 This repository entry documents a particular historical deck or edition, not a generic modern tarot system. Printed inscriptions, numbering, suit names, visual details, production history, and edition differences must be preserved rather than silently replaced with assumptions taken from later recolorings, redrawings, facsimiles, or derivative decks.
 
-The completed Major Arcana and Wands files treat each card as a historical image, a divinatory document, and a visual reasoning object. They preserve Waite’s published meanings as source evidence while allowing Smith’s actual composition to carry more interpretive information than a short keyword list.
+The completed Major Arcana, Wands, and Cups files treat each card as a historical image, a divinatory document, and a visual reasoning object. They preserve Waite’s published meanings as source evidence while allowing Smith’s actual composition to carry more interpretive information than a short keyword list.
 
 ## Visual style
 
@@ -36,7 +36,7 @@ The deck may be read historically, visually, symbolically, comparatively, or div
 5. **Read contextually.** A card’s role changes with the question, position, neighboring cards, direction, repetition, and chosen historical or divinatory method.
 6. **Treat later systems as optional overlays.** Golden Dawn, astrological, Kabbalistic, Etteilla, Marseille, and modern psychological correspondences should be named when used rather than presented as printed evidence.
 7. **Preserve agency and evidence.** Tarot does not prove another person’s private thoughts, override consent, replace professional advice, diagnose a condition, or guarantee a future event.
-8. **Use proportionate cautions.** Difficult imagery must not be sensationalized into literal death, disaster, abuse, illness, infidelity, betrayal, or supernatural attack without real-world evidence.
+8. **Use proportionate cautions.** Difficult imagery must not be sensationalized into literal death, disaster, abuse, illness, infidelity, betrayal, fraud, pregnancy, or supernatural attack without real-world evidence.
 9. **Synthesize rather than keyword-match.** Explain how the card’s visible, numerical, historical, and spread-level features support the reading.
 
 ## Numerology
@@ -47,7 +47,7 @@ Formal numbers should be read first in the deck’s own sequence. Reductions, re
 
 The repository sequence runs from `1` to `78` so filenames remain stable while each Major Arcana file separately records its historical printed number. Within the suits, Ace is treated as `1`, numbered cards run `2–10`, and courts follow Page, Knight, Queen, King.
 
-The completed Wands files also preserve the original face convention:
+The completed Wands and Cups files preserve the original face convention:
 
 - Ace: printed title panel;
 - numbered cards Two through Ten: Roman numerals `II–X`, no printed title panel;
@@ -59,7 +59,7 @@ The completed Wands files also preserve the original face convention:
 
 Wands express Fire, will, enterprise, passion, sexuality, creativity, courage, travel, leadership, competition, visibility, and directed vitality.
 
-The complete Wands sequence now has detailed files. Its imagery develops from the offered living staff of the Ace through planning, expansion, celebration, conflict, recognition, defense, speed, vigilance, burden, learning, pursuit, magnetic presence, and strategic authority.
+The complete Wands sequence has detailed files. Its imagery develops from the offered living staff of the Ace through planning, expansion, celebration, conflict, recognition, defense, speed, vigilance, burden, learning, pursuit, magnetic presence, and strategic authority.
 
 The Wands files distinguish:
 
@@ -74,15 +74,36 @@ The Wands files distinguish:
 
 ### Cups — Water
 
-Cups express water, emotion, relationship, imagination, memory, intuition, and receptivity. Their 14 detailed files remain to be produced.
+Cups express Water, emotion, relationship, imagination, memory, intuition, receptivity, grief, pleasure, belonging, and the forms through which feeling is offered, contained, shared, lost, remembered, imagined, left, enjoyed, and governed.
+
+The complete Cups sequence now has detailed files. Its imagery develops through:
+
+> **emotional opening → reciprocal exchange → community → withdrawal → grief → memory → imagination → departure → personal satisfaction → shared belonging → surprising message → idealistic approach → bounded receptivity → accountable emotional authority**
+
+The Cups files distinguish:
+
+- emotional potential from guaranteed relationship;
+- mutuality from fusion;
+- community from triangulation or gossip;
+- rest and refusal from pathology;
+- grief from total loss;
+- familiarity from compatibility;
+- symbolic imagination from verified fact;
+- departure from absence of feeling;
+- pleasure from mutual fulfilment;
+- family imagery from one compulsory family structure;
+- intuition from omniscience;
+- romantic approach from reliable commitment;
+- empathy from enmeshment;
+- and composure from honesty or moral authority.
 
 ### Swords — Air
 
-Swords express air, thought, truth, conflict, decision, analysis, language, and communication. Their 14 detailed files remain to be produced.
+Swords express Air, thought, truth, conflict, decision, analysis, language, and communication. Their 14 detailed files remain to be produced.
 
 ### Pentacles — Earth
 
-Pentacles express earth, body, work, money, resources, health of routine, skill, cultivation, and material consequence. Their 14 detailed files remain to be produced.
+Pentacles express Earth, body, work, money, resources, health of routine, skill, cultivation, and material consequence. Their 14 detailed files remain to be produced.
 
 Court rank, scene, emblem count, gesture, landscape, and suit order are edition-specific evidence. Because Smith illustrates every pip card scenically, all future Minor Arcana files must inspect the full narrative rather than reduce a card to a number-and-element formula.
 
@@ -90,7 +111,7 @@ Court rank, scene, emblem count, gesture, landscape, and suit order are edition-
 
 Infinity signs, roses and lilies, mountains, paths, rivers, towers, gardens, dogs, birds, horses, sphinxes, angels, crowns, hands emerging from clouds, yellow skies, sun and moon faces, red banners, wreaths, crossed keys, vessels, swords, pentacles, and the four living beings recur as structural signals. Smith’s staging often makes direction, distance, missing participation, posture, eye-line, and the contrast between foreground and horizon materially important.
 
-Within Wands, recurring features include:
+### Recurring Wands features
 
 - living leaves on staffs;
 - offered, held, planted, crossed, flying, fenced, bundled, and enthroned wands;
@@ -103,6 +124,17 @@ Within Wands, recurring features include:
 - visible versus unseen participants;
 - and the changing relationship between one person’s Fire and a wider group or structure.
 
+### Recurring Cups features
+
+- open, overflowing, exchanged, raised, ignored, spilled, flower-filled, visionary, stacked, displayed, enclosed, and governed cups;
+- hands and offers whose recipients remain free to accept or decline;
+- clouds, droplets, streams, rivers, sea, shorelines, waves, and bridges;
+- doves, fish, serpents, winged lion, dragon, horse, and ship;
+- flowers, wreaths, harvest fruit, rainbows, houses, courtyards, thrones, and distant land;
+- pairs, groups, solitary figures, children, messengers, travelers, and rulers;
+- turned backs, hidden faces, crossed arms, raised arms, offers, departures, and focused gazes;
+- and the changing relationship between private feeling, mutual exchange, social belonging, imagination, loss, and emotional governance.
+
 Repetition across a spread—gestures, crowns, animals, celestial forms, architectural openings, vegetation, weapons, vessels, colors, directions, or suit-emblem arrangements—should influence interpretation when it is genuinely visible in this edition.
 
 ## Reading reversals
@@ -111,12 +143,16 @@ Reversals are optional. Historical packs were not always designed around the mod
 
 When reversals are used, they may indicate blocked, delayed, inward, excessive, diminished, private, unstable, recovering, or differently oriented expression. The card’s actual inverted composition, Waite’s documented reversed range where relevant, the selected reading system, and surrounding cards should determine the interpretation.
 
-A reversal should not be treated as automatic catastrophe, moral failure, or simple negation. The completed Wands files preserve several important historical nuances:
+A reversal should not be treated as automatic catastrophe, moral failure, or simple negation. The completed files preserve several important historical nuances:
 
 - the reversed Four of Wands remains largely favorable in Waite’s text;
-- the reversed Three can indicate the end of adversity;
-- the reversed Ace’s severe vocabulary must not be literalized into inevitable ruin;
-- and court-card reversals can describe inhibited, unstable, severe, or misdirected roles without proving deceit, betrayal, or infidelity.
+- the reversed Three of Wands can indicate the end of adversity;
+- the reversed Ace of Wands’ severe vocabulary must not be literalized into inevitable ruin;
+- the reversed Four of Cups can indicate novelty, new instruction, and new relations;
+- the reversed Six of Cups can point toward the future and renewal;
+- the reversed Eight of Cups can include joy, happiness, and feasting;
+- the reversed Nine of Cups includes truth, loyalty, liberty, mistakes, and imperfections;
+- and court-card reversals can describe inhibited, unstable, severe, misdirected, or ethically compromised roles without proving deceit, betrayal, vice, fraud, or infidelity.
 
 ## File convention
 
@@ -124,7 +160,7 @@ The current deck folder contains:
 
 - `DECK-INFO.md` — historical identity, reading method, structure, implementation status, and source cautions;
 - `CARDS.md` — the authoritative 78-card sequence, short descriptions, and implementation status;
-- detailed individual Markdown descriptions for cards **1–36**.
+- detailed individual Markdown descriptions for cards **1–50**.
 
 ### Completed Major Arcana files
 
@@ -168,14 +204,31 @@ The current deck folder contains:
 - `35-queen-of-wands.md`
 - `36-king-of-wands.md`
 
-Cards `37–78`, comprising the complete suits of Cups, Swords, and Pentacles, do not yet have detailed individual Markdown files.
+### Completed Cups files
+
+- `37-ace-of-cups.md`
+- `38-two-of-cups.md`
+- `39-three-of-cups.md`
+- `40-four-of-cups.md`
+- `41-five-of-cups.md`
+- `42-six-of-cups.md`
+- `43-seven-of-cups.md`
+- `44-eight-of-cups.md`
+- `45-nine-of-cups.md`
+- `46-ten-of-cups.md`
+- `47-page-of-cups.md`
+- `48-knight-of-cups.md`
+- `49-queen-of-cups.md`
+- `50-king-of-cups.md`
+
+Cards `51–78`, comprising the complete suits of Swords and Pentacles, do not yet have detailed individual Markdown files.
 
 Artwork files are produced and managed independently and may be added, replaced, restored, or removed while the historical descriptions are developed. This status record makes no claim that any particular image file has been approved or synchronized.
 
 Each completed card should ultimately be represented by matching numbered files such as:
 
-- `23-ace-of-wands.jpg`
-- `23-ace-of-wands.md`
+- `37-ace-of-cups.jpg`
+- `37-ace-of-cups.md`
 
 Each current and future card Markdown file follows the repository’s detailed standard:
 
