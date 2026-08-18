@@ -4,9 +4,11 @@ This file defines the historical **78-card** sequence documented for Rider–Wai
 
 The table uses stable repository sequence numbers while preserving historical card numbers, titles, ranks, and edition-specific exceptions inside the card name or description. Short descriptions identify each card’s primary visual or structural role; they are not substitutes for the detailed image-led card files.
 
-Detailed card-specific Markdown files now exist for cards **1–22**, completing all **22 Major Arcana** from The Fool through The World. Cards **23–78**, the 56 Minor Arcana, remain index entries awaiting detailed card files. Artwork is produced and managed separately from this Markdown status record.
+Detailed card-specific Markdown files now exist for cards **1–36**: all **22 Major Arcana** from The Fool through The World and the complete **14-card suit of Wands** from Ace through King. Cards **37–78**, comprising Cups, Swords, and Pentacles, remain index entries awaiting detailed card files. Artwork is produced and managed separately from this Markdown status record.
 
 The sequence follows the 22 Major Arcana from `0` through `XXI`, then Wands, Cups, Swords, and Pentacles from Ace through King. Strength is `VIII` and Justice is `XI`, as in Waite’s ordering.
+
+For the original 1909 faces, numbered pip cards `2–10` display Roman numerals rather than printed title panels. Aces and court cards carry printed titles. Repository filenames and the table below use normalized English card names so the file sequence remains unambiguous while individual card metadata records what is actually printed.
 
 | Number | Card name | Short description |
 |---:|---|---|
@@ -32,20 +34,20 @@ The sequence follows the 22 Major Arcana from `0` through `XXI`, then Wands, Cup
 | 20 | **XIX — The Sun** | A child rides beneath a radiant sun before sunflowers; vitality, clarity, joy, visibility, and liberated life. |
 | 21 | **XX — Judgement** | An angel sounds a trumpet over rising figures; awakening, reckoning, response, renewal, and a call that changes direction. |
 | 22 | **XXI — The World** | A dancing figure is enclosed by a wreath and four living beings; completion, integration, participation, and fulfilled cycle. |
-| 23 | **Ace of Wands** | A fully illustrated scene: hand presents a sprouting wand; ignition, initiative, desire, and a beginning. |
-| 24 | **Two of Wands** | A fully illustrated scene: figure holds a globe between battlements; planning, choice of horizon, and contained ambition. |
-| 25 | **Three of Wands** | A fully illustrated scene: figure watches ships from a high shore; expansion, foresight, distance, and results in motion. |
-| 26 | **Four of Wands** | A fully illustrated scene: garlanded wands frame celebrants; welcome, milestone, community, and shared joy. |
-| 27 | **Five of Wands** | A fully illustrated scene: five youths cross staves; competition, rehearsal, friction, and uncoordinated energy. |
-| 28 | **Six of Wands** | A fully illustrated scene: laurel-crowned rider receives acclaim; victory, recognition, and public visibility. |
-| 29 | **Seven of Wands** | A fully illustrated scene: lone figure defends higher ground; resistance, boundary, courage, and sustained position. |
-| 30 | **Eight of Wands** | A fully illustrated scene: eight staves fly across open sky; speed, messages, travel, and aligned movement. |
-| 31 | **Nine of Wands** | A fully illustrated scene: wounded guard stands before a wall of staves; vigilance, resilience, fatigue, and readiness. |
-| 32 | **Ten of Wands** | A fully illustrated scene: figure carries a heavy bundle toward town; burden, responsibility, overload, and nearing completion. |
-| 33 | **Page of Wands** | A fully illustrated scene: young figure studies a staff; message, curiosity, experiment, and emerging fire. |
-| 34 | **Knight of Wands** | A fully illustrated scene: armored rider charges with a flowering staff; pursuit, travel, volatility, and passionate momentum. |
-| 35 | **Queen of Wands** | A fully illustrated scene: queen holds sunflower and wand beside a black cat; warmth, confidence, attraction, and independence. |
-| 36 | **King of Wands** | A fully illustrated scene: salamander-decorated ruler holds a flowering staff; vision, leadership, enterprise, and directed will. |
+| 23 | **Ace of Wands** | A hand presents a sprouting wand above river, trees, and a distant castle; ignition, initiative, desire, and a living beginning. |
+| 24 | **Two of Wands** | A figure holds a globe between one free and one fixed wand on a battlement; planning, dominion, and choice of horizon. |
+| 25 | **Three of Wands** | A figure watches ships from a high shore beside three planted staffs; expansion, foresight, trade, and results in motion. |
+| 26 | **Four of Wands** | Four garlanded staffs frame celebrants, bridge, and manor; welcome, milestone, community, and shared stability. |
+| 27 | **Five of Wands** | Five youths cross living staffs in an unstructured field; competition, rehearsal, friction, and uncoordinated energy. |
+| 28 | **Six of Wands** | A laurel-crowned rider carries a crowned wand through attendants; victory, recognition, news, and public visibility. |
+| 29 | **Seven of Wands** | A lone figure on higher ground answers six rising staffs; resistance, boundary, courage, and sustained position. |
+| 30 | **Eight of Wands** | Eight living staffs fly in parallel toward river and green land; speed, messages, travel, and aligned movement. |
+| 31 | **Nine of Wands** | A bandaged guard leans on one staff before an eight-wand palisade; vigilance, resilience, fatigue, and guarded recovery. |
+| 32 | **Ten of Wands** | A bent figure carries all ten staffs toward a nearby town; burden, responsibility, overload, and nearing completion. |
+| 33 | **Page of Wands** | A youthful messenger studies a sprouting staff in an arid landscape; proclamation, curiosity, experiment, and emerging Fire. |
+| 34 | **Knight of Wands** | An armored rider carries a short flowering wand on a rearing horse; journey, pursuit, relocation, and precipitate momentum. |
+| 35 | **Queen of Wands** | A crowned queen holds wand and sunflower above a black cat; magnetism, confidence, instinct, and creative cultivation. |
+| 36 | **King of Wands** | A crowned ruler holds a flowering staff amid lion and salamander motifs; vision, enterprise, authority, and accountable leadership. |
 | 37 | **Ace of Cups** | A fully illustrated scene: hand presents an overflowing cup beneath a dove; emotional opening, grace, intimacy, and renewal. |
 | 38 | **Two of Cups** | A fully illustrated scene: two figures exchange cups beneath a winged lion; reciprocity, attraction, agreement, and recognition. |
 | 39 | **Three of Cups** | A fully illustrated scene: three figures raise cups in a circle; friendship, celebration, support, and collaboration. |
