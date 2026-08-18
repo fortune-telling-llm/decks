@@ -5,7 +5,7 @@
 **Deck name:** Rider–Waite–Smith Tarot — Original Roses & Lilies Edition (1909)  
 **Deck family:** Tarot  
 **Historical edition:** First William Rider & Son issue, London, December 1909, identified by the blue Roses & Lilies back design  
-**Status:** Foundation documented and detailed Markdown descriptions completed for cards 1–50: all 22 Major Arcana, the complete 14-card suit of Wands, and the complete 14-card suit of Cups; Swords and Pentacles still await detailed card files; artwork is developed separately  
+**Status:** Foundation documented and detailed Markdown descriptions completed for cards 1–64: all 22 Major Arcana and the complete 14-card suits of Wands, Cups, and Swords; only Pentacles still awaits detailed card files; artwork is developed separately  
 **Historical structure:** 78 cards: 22 fully illustrated Major Arcana and 56 fully illustrated Minor Arcana; Strength VIII and Justice XI  
 **Primary reading style:** image-led reading of Pamela Colman Smith’s complete scenic sequence, supported by Arthur Edward Waite’s published structure and clearly identified later correspondences
 
@@ -15,7 +15,7 @@ The 1909 Rider–Waite–Smith deck joins Waite’s occult programme with Pamela
 
 This repository entry documents a particular historical deck or edition, not a generic modern tarot system. Printed inscriptions, numbering, suit names, visual details, production history, and edition differences must be preserved rather than silently replaced with assumptions taken from later recolorings, redrawings, facsimiles, or derivative decks.
 
-The completed Major Arcana, Wands, and Cups files treat each card as a historical image, a divinatory document, and a visual reasoning object. They preserve Waite’s published meanings as source evidence while allowing Smith’s actual composition to carry more interpretive information than a short keyword list.
+The completed Major Arcana, Wands, Cups, and Swords files treat each card as a historical image, a divinatory document, and a visual reasoning object. They preserve Waite’s published meanings as source evidence while allowing Smith’s actual composition to carry more interpretive information than a short keyword list.
 
 ## Visual style
 
@@ -36,7 +36,7 @@ The deck may be read historically, visually, symbolically, comparatively, or div
 5. **Read contextually.** A card’s role changes with the question, position, neighboring cards, direction, repetition, and chosen historical or divinatory method.
 6. **Treat later systems as optional overlays.** Golden Dawn, astrological, Kabbalistic, Etteilla, Marseille, and modern psychological correspondences should be named when used rather than presented as printed evidence.
 7. **Preserve agency and evidence.** Tarot does not prove another person’s private thoughts, override consent, replace professional advice, diagnose a condition, or guarantee a future event.
-8. **Use proportionate cautions.** Difficult imagery must not be sensationalized into literal death, disaster, abuse, illness, infidelity, betrayal, fraud, pregnancy, or supernatural attack without real-world evidence.
+8. **Use proportionate cautions.** Difficult imagery must not be sensationalized into literal death, disaster, abuse, illness, infidelity, betrayal, fraud, pregnancy, captivity, violence, or supernatural attack without real-world evidence.
 9. **Synthesize rather than keyword-match.** Explain how the card’s visible, numerical, historical, and spread-level features support the reading.
 
 ## Numerology
@@ -47,7 +47,7 @@ Formal numbers should be read first in the deck’s own sequence. Reductions, re
 
 The repository sequence runs from `1` to `78` so filenames remain stable while each Major Arcana file separately records its historical printed number. Within the suits, Ace is treated as `1`, numbered cards run `2–10`, and courts follow Page, Knight, Queen, King.
 
-The completed Wands and Cups files preserve the original face convention:
+The completed Wands, Cups, and Swords files preserve the original face convention:
 
 - Ace: printed title panel;
 - numbered cards Two through Ten: Roman numerals `II–X`, no printed title panel;
@@ -76,7 +76,7 @@ The Wands files distinguish:
 
 Cups express Water, emotion, relationship, imagination, memory, intuition, receptivity, grief, pleasure, belonging, and the forms through which feeling is offered, contained, shared, lost, remembered, imagined, left, enjoyed, and governed.
 
-The complete Cups sequence now has detailed files. Its imagery develops through:
+The complete Cups sequence has detailed files. Its imagery develops through:
 
 > **emotional opening → reciprocal exchange → community → withdrawal → grief → memory → imagination → departure → personal satisfaction → shared belonging → surprising message → idealistic approach → bounded receptivity → accountable emotional authority**
 
@@ -99,13 +99,34 @@ The Cups files distinguish:
 
 ### Swords — Air
 
-Swords express Air, thought, truth, conflict, decision, analysis, language, and communication. Their 14 detailed files remain to be produced.
+Swords express Air, thought, truth, conflict, decision, analysis, language, communication, power, restriction, strategy, distress, and formal authority.
+
+The complete Swords sequence now has detailed files. Its imagery develops through:
+
+> **decisive clarity → guarded stalemate → explicit grief → protected recovery → costly conflict → assisted passage → partial strategy → perceived restriction → private distress → final ending → emerging inquiry → rapid action → discerning boundary → accountable authority**
+
+The Swords files distinguish:
+
+- clarity from cruelty;
+- neutrality from avoidance;
+- grief from unsupported betrayal claims;
+- recovery from literal death imagery;
+- victory from moral correctness;
+- transition from complete emotional resolution;
+- strategy from proven deception;
+- restricted agency from blame;
+- distress from diagnosis or prophecy;
+- symbolic ending from violent death;
+- vigilance from spying;
+- courage from recklessness;
+- discernment from gendered coldness stereotypes;
+- and authority from infallibility.
 
 ### Pentacles — Earth
 
 Pentacles express Earth, body, work, money, resources, health of routine, skill, cultivation, and material consequence. Their 14 detailed files remain to be produced.
 
-Court rank, scene, emblem count, gesture, landscape, and suit order are edition-specific evidence. Because Smith illustrates every pip card scenically, all future Minor Arcana files must inspect the full narrative rather than reduce a card to a number-and-element formula.
+Court rank, scene, emblem count, gesture, landscape, and suit order are edition-specific evidence. Because Smith illustrates every pip card scenically, every card file must inspect the full narrative rather than reduce a card to a number-and-element formula.
 
 ## Recurring deck motifs
 
@@ -135,6 +156,15 @@ Infinity signs, roses and lilies, mountains, paths, rivers, towers, gardens, dog
 - turned backs, hidden faces, crossed arms, raised arms, offers, departures, and focused gazes;
 - and the changing relationship between private feeling, mutual exchange, social belonging, imagination, loss, and emotional governance.
 
+### Recurring Swords features
+
+- offered, crossed, piercing, suspended, gathered, transported, carried, planted, repeated, raised, and enthroned swords;
+- clouds, rain, wind, black skies, golden horizons, water, shorelines, mud, hills, castles, tents, churches, beds, tombs, boats, and thrones;
+- blindfolds, bindings, prayer, turned backs, backward glances, covered faces, charging poses, open hands, direct gazes, and prone bodies;
+- birds, butterflies, trees, horses, stained glass, crowns, branches, quilts, carved scenes, cloaks, and red cloth;
+- visible and absent opponents, weapon-holders, helpers, witnesses, and decision-makers;
+- and the changing relationship between mental potential, choice, grief, recovery, conflict, passage, strategy, restriction, distress, ending, inquiry, action, discernment, and authority.
+
 Repetition across a spread—gestures, crowns, animals, celestial forms, architectural openings, vegetation, weapons, vessels, colors, directions, or suit-emblem arrangements—should influence interpretation when it is genuinely visible in this edition.
 
 ## Reading reversals
@@ -152,7 +182,11 @@ A reversal should not be treated as automatic catastrophe, moral failure, or sim
 - the reversed Six of Cups can point toward the future and renewal;
 - the reversed Eight of Cups can include joy, happiness, and feasting;
 - the reversed Nine of Cups includes truth, loyalty, liberty, mistakes, and imperfections;
-- and court-card reversals can describe inhibited, unstable, severe, misdirected, or ethically compromised roles without proving deceit, betrayal, vice, fraud, or infidelity.
+- the reversed Ace of Swords retains the same force but can produce disastrous results, while its historical conception and childbirth vocabulary is not a pregnancy prediction;
+- the reversed Six of Swords can include declaration, confession, and publicity rather than simple blocked travel;
+- the reversed Seven of Swords can include advice, counsel, instruction, slander, and babbling;
+- the reversed Ten of Swords can indicate temporary advantage, profit, success, favor, power, or authority rather than guaranteed recovery;
+- and court-card reversals can describe inhibited, unstable, severe, misdirected, or ethically compromised roles without proving deceit, betrayal, vice, fraud, infidelity, spying, cruelty, illness, or evil intention.
 
 ## File convention
 
@@ -160,7 +194,7 @@ The current deck folder contains:
 
 - `DECK-INFO.md` — historical identity, reading method, structure, implementation status, and source cautions;
 - `CARDS.md` — the authoritative 78-card sequence, short descriptions, and implementation status;
-- detailed individual Markdown descriptions for cards **1–50**.
+- detailed individual Markdown descriptions for cards **1–64**.
 
 ### Completed Major Arcana files
 
@@ -221,14 +255,31 @@ The current deck folder contains:
 - `49-queen-of-cups.md`
 - `50-king-of-cups.md`
 
-Cards `51–78`, comprising the complete suits of Swords and Pentacles, do not yet have detailed individual Markdown files.
+### Completed Swords files
+
+- `51-ace-of-swords.md`
+- `52-two-of-swords.md`
+- `53-three-of-swords.md`
+- `54-four-of-swords.md`
+- `55-five-of-swords.md`
+- `56-six-of-swords.md`
+- `57-seven-of-swords.md`
+- `58-eight-of-swords.md`
+- `59-nine-of-swords.md`
+- `60-ten-of-swords.md`
+- `61-page-of-swords.md`
+- `62-knight-of-swords.md`
+- `63-queen-of-swords.md`
+- `64-king-of-swords.md`
+
+Cards `65–78`, comprising the complete suit of Pentacles, do not yet have detailed individual Markdown files.
 
 Artwork files are produced and managed independently and may be added, replaced, restored, or removed while the historical descriptions are developed. This status record makes no claim that any particular image file has been approved or synchronized.
 
 Each completed card should ultimately be represented by matching numbered files such as:
 
-- `37-ace-of-cups.jpg`
-- `37-ace-of-cups.md`
+- `51-ace-of-swords.jpg`
+- `51-ace-of-swords.md`
 
 Each current and future card Markdown file follows the repository’s detailed standard:
 
@@ -261,6 +312,8 @@ Any literal description must be checked against the exact source image. Do not d
 The target is the first 1909 Roses & Lilies issue rather than an unspecified later recoloring. Historical verification should distinguish original Smith linework and early Rider color from later redrawings, recolorings, border changes, cropping, and modern facsimiles. Waite and Smith should both be credited; the art should not be described as Waite’s artwork.
 
 The completed files retain Waite’s historically documented meanings where useful but do not permit those brief lists to override Smith’s literal staging. Apparent contradictions between Waite’s upright and reversed lists are acknowledged rather than silently normalized into a modern keyword system.
+
+The Swords files are especially careful with Waite’s severe period vocabulary. They preserve his explicit qualification that the Ten of Swords is not especially a card of violent death, his statement that the Seven’s design is uncertain because meanings diverge, and his description of the Eight as temporary durance rather than irretrievable bondage. Historical references to death, miscarriage, sickness, fatality, burial, spying, cruelty, treachery, deceit, or evil intention are not treated as predictions, diagnoses, or factual accusations.
 
 Historical court-card descriptions involving gender, age, complexion, class, occupation, or marital status are recorded as period evidence where relevant but are not treated as reliable modern identification rules.
 
