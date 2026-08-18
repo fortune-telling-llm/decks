@@ -1,4 +1,4 @@
-name: Inspect Stellar Mosaic recovery prefix
+name: Build complete Stellar Mosaic Tarot descriptions
 
 on:
   pull_request:
@@ -6,14 +6,12 @@ on:
       - feat/stellar-mosaic-tarot-card-descriptions
     paths:
       - .deck-build/TRIGGER
-      - .deck-build/diagnose-prefix.py
-      - .github/workflows/expand-stellar-mosaic.yml
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
-  inspect:
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: Check out the feature branch
@@ -22,8 +20,35 @@ jobs:
           fetch-depth: 0
           ref: feat/stellar-mosaic-tarot-card-descriptions
 
-      - name: Inspect complete tar members in the verified prefix
+      - name: Assemble, compile, generate, and validate all descriptions
         shell: bash
         run: |
           set -euo pipefail
-          python3 .deck-build/diagnose-prefix.py
+          cat .deck-build/stellar_minor.part-* > .deck-build/stellar_minor.py
+          cat .deck-build/stellar_render.part-* > .deck-build/stellar_render.py
+          python3 -m py_compile \
+            .deck-build/stellar_base.py \
+            .deck-build/stellar_minor.py \
+            .deck-build/stellar_major.py \
+            .deck-build/stellar_render.py \
+            .deck-build/generate_stellar_mosaic.py
+          PYTHONPATH=.deck-build python3 .deck-build/generate_stellar_mosaic.py
+
+      - name: Remove the one-shot build transport
+        shell: bash
+        run: |
+          set -euo pipefail
+          rm -rf .deck-build
+          rm -f .github/workflows/expand-stellar-mosaic.yml
+          rmdir .github/workflows 2>/dev/null || true
+          rmdir .github 2>/dev/null || true
+
+      - name: Commit the completed deck documentation
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -A
+          git commit -m 'feat: add complete Stellar Mosaic Tarot card descriptions'
+          git push origin HEAD:feat/stellar-mosaic-tarot-card-descriptions
