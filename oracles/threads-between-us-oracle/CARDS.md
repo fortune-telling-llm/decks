@@ -10,7 +10,7 @@ Each card is intentionally multivalent. Depending on the question, spread positi
 - the connection's purpose, lesson, boundary, or direction;
 - or the choices that can change what happens next.
 
-These short descriptions are planning summaries, not substitutes for the image-led card files. Detailed card-specific Markdown files now exist for cards **1–10**. One provisional SVG artwork file currently exists for card **1**; cards **2–60** have no artwork. Cards **11–60** remain planning entries only.
+These short descriptions are planning summaries, not substitutes for the image-led card files. Detailed card-specific Markdown files now exist for cards **1–20**. Cards **21–60** remain planning entries only. Artwork is produced and managed separately from this card-description index.
 
 | Number | Card name | Short description |
 |---:|---|---|
