@@ -9,8 +9,10 @@ on:
   pull_request:
     branches:
       - main
+      - feat/stellar-mosaic-tarot-card-descriptions
     paths:
       - .deck-build/READY
+      - .deck-build/TRIGGER
       - .deck-build/payload.part-*
       - .github/workflows/expand-stellar-mosaic.yml
 
@@ -21,7 +23,7 @@ jobs:
   expand:
     runs-on: ubuntu-latest
     steps:
-      - name: Check out feature branch
+      - name: Check out feature content
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
