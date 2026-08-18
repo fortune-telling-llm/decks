@@ -4,7 +4,7 @@ This file defines the historical **78-card** sequence documented for Rider–Wai
 
 The table uses stable repository sequence numbers while preserving historical card numbers, titles, ranks, and edition-specific exceptions inside the card name or description. Short descriptions identify each card’s primary visual or structural role; they are not substitutes for the detailed image-led card files.
 
-Detailed card-specific Markdown files now exist for cards **1–50**: all **22 Major Arcana**, the complete **14-card suit of Wands**, and the complete **14-card suit of Cups**. Cards **51–78**, comprising Swords and Pentacles, remain index entries awaiting detailed card files. Artwork is produced and managed separately from this Markdown status record.
+Detailed card-specific Markdown files now exist for cards **1–64**: all **22 Major Arcana**, the complete **14-card suit of Wands**, the complete **14-card suit of Cups**, and the complete **14-card suit of Swords**. Cards **65–78**, comprising the suit of Pentacles, remain index entries awaiting detailed card files. Artwork is produced and managed separately from this Markdown status record.
 
 The sequence follows the 22 Major Arcana from `0` through `XXI`, then Wands, Cups, Swords, and Pentacles from Ace through King. Strength is `VIII` and Justice is `XI`, as in Waite’s ordering.
 
@@ -62,20 +62,20 @@ For the original 1909 faces, numbered pip cards `2–10` display Roman numerals 
 | 48 | **Knight of Cups** | A calm armored rider carries an upright cup beside a winding stream; invitation, proposal, diplomacy, and idealistic approach. |
 | 49 | **Queen of Cups** | A crowned queen studies an ornate enclosed vessel on a carved throne at the shoreline; empathy, privacy, imagination, and bounded receptivity. |
 | 50 | **King of Cups** | A crowned king holds cup and scepter on a throne surrounded by waves, fish, and ship; emotional authority, diplomacy, and accountable care. |
-| 51 | **Ace of Swords** | A fully illustrated scene: hand raises a crowned sword; truth, decision, clarity, conflict, and a cutting beginning. |
-| 52 | **Two of Swords** | A fully illustrated scene: blindfolded figure crosses swords before the sea; stalemate, guarded choice, and balanced tension. |
-| 53 | **Three of Swords** | A fully illustrated scene: three swords pierce a heart beneath rain; grief, painful truth, separation, and mental-emotional wound. |
-| 54 | **Four of Swords** | A fully illustrated scene: recumbent figure rests beneath wall swords; recovery, truce, contemplation, and withdrawal. |
-| 55 | **Five of Swords** | A fully illustrated scene: victor gathers swords while others leave; hollow victory, humiliation, strategy, and unequal cost. |
-| 56 | **Six of Swords** | A fully illustrated scene: boat carries figures across water; transition, passage, help, distance, and moving through difficulty. |
-| 57 | **Seven of Swords** | A fully illustrated scene: figure removes swords from a camp; strategy, secrecy, independence, evasion, and partial disclosure. |
-| 58 | **Eight of Swords** | A fully illustrated scene: bound blindfolded figure stands among swords; restriction, fear, limited view, and nonabsolute constraints. |
-| 59 | **Nine of Swords** | A fully illustrated scene: person wakes in distress beneath nine swords; anxiety, guilt, nightmare, and rumination. |
-| 60 | **Ten of Swords** | A fully illustrated scene: prone figure lies beneath ten swords at dawn; painful ending, exhaustion, finality, and aftermath. |
-| 61 | **Page of Swords** | A fully illustrated scene: young figure raises a sword in strong wind; alertness, inquiry, defensiveness, and restless thought. |
-| 62 | **Knight of Swords** | A fully illustrated scene: armored rider charges into storm; speed, argument, courage, and action outrunning reflection. |
-| 63 | **Queen of Swords** | A fully illustrated scene: queen raises a sword and extends an open hand; discernment, independence, and direct truth. |
-| 64 | **King of Swords** | A fully illustrated scene: king holds an upright sword beneath clear sky; reason, law, strategy, and disciplined judgement. |
+| 51 | **Ace of Swords** | A cloud-borne hand raises an upright sword through a crown with hanging branches and six golden marks; clarity, force, decision, and consequential truth. |
+| 52 | **Two of Swords** | A blindfolded seated figure balances two crossed blades before rocks, sea, and crescent moon; guarded choice, armed truce, and suspended judgment. |
+| 53 | **Three of Swords** | Three blades pierce an exposed red heart beneath gray cloud and rain; explicit grief, painful truth, division, and emotional consequence. |
+| 54 | **Four of Swords** | A praying golden effigy rests on a tomb beneath three wall swords while a fourth lies horizontally beside stained glass; retreat, recovery, and vigilant pause. |
+| 55 | **Five of Swords** | A foreground figure gathers three swords while two lie on the ground and two people retreat toward the water; hollow victory, leverage, and unequal aftermath. |
+| 56 | **Six of Swords** | A ferryman transports two cloaked passengers and six upright swords across divided water toward a farther shore; assisted transition, distance, and carried history. |
+| 57 | **Seven of Swords** | A looking-back figure carries five swords away from a tented camp while two remain planted; strategy, selective removal, evasion, and incomplete departure. |
+| 58 | **Eight of Swords** | A blindfolded bound figure stands on wet ground among eight planted swords before a distant castle and visible gap; restriction, fear, and obscured agency. |
+| 59 | **Nine of Swords** | A person sits in bed covering the face beneath nine horizontal blades, a rose-and-glyph quilt, and carved conflict scene; private distress, guilt, and rumination. |
+| 60 | **Ten of Swords** | A prone figure lies beneath ten upright swords beside calm water and a narrow golden horizon; painful finality, exhaustion, aftermath, and future beyond the ending. |
+| 61 | **Page of Swords** | A windblown Page turns while holding an upright sword on exposed high ground beneath moving clouds and birds; inquiry, vigilance, news, and emerging Air. |
+| 62 | **Knight of Swords** | An armored rider charges on a pale horse with raised blade through storm-driven clouds, birds, and bent trees; speed, confrontation, courage, and reduced braking distance. |
+| 63 | **Queen of Swords** | A profile queen raises an upright sword and extends an open hand beneath winged motifs, clouds, and a distant bird; discernment, testimony, boundary, and grief-shaped clarity. |
+| 64 | **King of Swords** | A crowned king sits frontally with an upright sword on a carved throne beneath birds and moving cloud; judgment, law, strategy, authority, and accountable command. |
 | 65 | **Ace of Pentacles** | A fully illustrated scene: hand offers a pentacle above a garden path; material opportunity, body, work, and tangible beginning. |
 | 66 | **Two of Pentacles** | A fully illustrated scene: figure juggles coins within an infinity loop; adaptation, budgeting, rhythm, and changing demands. |
 | 67 | **Three of Pentacles** | A fully illustrated scene: craftsperson and patrons confer beneath an arch; skill, teamwork, planning, and recognition. |
