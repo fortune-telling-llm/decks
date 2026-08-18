@@ -9,6 +9,14 @@ on:
       - .deck-build/TRIGGER
       - .deck-build/candidates/**
       - .github/workflows/expand-stellar-mosaic.yml
+  pull_request:
+    branches:
+      - feat/stellar-mosaic-tarot-card-descriptions
+    paths:
+      - .deck-build/READY
+      - .deck-build/TRIGGER
+      - .deck-build/candidates/**
+      - .github/workflows/expand-stellar-mosaic.yml
 
 permissions:
   contents: write
@@ -17,11 +25,10 @@ jobs:
   expand:
     runs-on: ubuntu-latest
     steps:
-      - name: Check out the recovery branch
+      - name: Check out the recovery candidate
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
-          ref: ${{ github.ref_name }}
 
       - name: Reconstruct and verify the preserved archive
         shell: bash
@@ -34,7 +41,6 @@ jobs:
           import binascii
           import hashlib
           import lzma
-          import sys
           from pathlib import Path
 
           TARGET_SHA256 = 'c5dd8815d7c2f80d4d142c3bff6dff251ca225f60800506076bdc71b51f01676'
@@ -62,7 +68,7 @@ jobs:
               raise SystemExit(f'Expected one XZ/base64 opening chunk, found {starts!r}.')
           start = starts[0]
           remaining = tuple(name for name in chunks if name != start)
-          visited = 0
+          visited = [0]
 
           def encoded_for(order: tuple[str, ...]) -> bytes:
               return b''.join(chunks[name] for name in order)
@@ -101,12 +107,11 @@ jobs:
               return 'match', full
 
           def search(order: tuple[str, ...], unused: tuple[str, ...]) -> tuple[tuple[str, ...], bytes] | None:
-              nonlocal_visited[0] += 1
-              count = nonlocal_visited[0]
-              if count > MAX_NODES:
+              visited[0] += 1
+              if visited[0] > MAX_NODES:
                   raise RuntimeError(f'Reconstruction exceeded {MAX_NODES} search nodes.')
-              if count % 5000 == 0:
-                  print(f'Checked {count} candidate prefixes...', flush=True)
+              if visited[0] % 5000 == 0:
+                  print(f'Checked {visited[0]} candidate prefixes...', flush=True)
 
               status, archive = inspect(order)
               if status == 'match':
@@ -123,7 +128,6 @@ jobs:
                       return result
               return None
 
-          nonlocal_visited = [visited]
           result = search((start,), remaining)
           if result is None:
               raise SystemExit(
@@ -134,7 +138,7 @@ jobs:
           output = Path('/tmp/stellar-mosaic.tar.xz')
           output.write_bytes(archive)
           actual = hashlib.sha256(archive).hexdigest()
-          print(f'Reconstructed archive after {nonlocal_visited[0]} prefix checks.')
+          print(f'Reconstructed archive after {visited[0]} prefix checks.')
           print(f'Archive size: {len(archive)} bytes')
           print(f'Archive SHA-256: {actual}')
           print('Selected chunk order:')
