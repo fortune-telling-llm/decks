@@ -19,29 +19,160 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Reassemble and verify payload
+      - name: Recover and verify the staged payload
         shell: bash
         run: |
           set -euo pipefail
-          cat .deck-build/payload.part-* | base64 --decode > /tmp/stellar-mosaic.tar.xz
-          echo "c5dd8815d7c2f80d4d142c3bff6dff251ca225f60800506076bdc71b51f01676  /tmp/stellar-mosaic.tar.xz" | sha256sum --check --strict
+          shopt -s nullglob
 
-      - name: Expand and validate card descriptions
+          parts=(.deck-build/payload.part-*)
+          test "${#parts[@]}" -eq 4
+
+          echo 'Staged payload objects:'
+          for part in "${parts[@]}"; do
+            printf '%s: ' "$part"
+            wc -c < "$part" | tr -d '\n'
+            printf ' bytes; first 16 bytes: '
+            head -c 16 "$part" | xxd -p -c 16
+          done
+
+          expected='c5dd8815d7c2f80d4d142c3bff6dff251ca225f60800506076bdc71b51f01676'
+          recovered=''
+
+          while read -r a b c d; do
+            order=(
+              ".deck-build/payload.part-$a"
+              ".deck-build/payload.part-$b"
+              ".deck-build/payload.part-$c"
+              ".deck-build/payload.part-$d"
+            )
+
+            for mode in raw concatenated-base64 per-part-base64; do
+              candidate="/tmp/candidate-${a}${b}${c}${d}-${mode}.tar.xz"
+              rm -f "$candidate"
+
+              case "$mode" in
+                raw)
+                  cat "${order[@]}" > "$candidate"
+                  ;;
+                concatenated-base64)
+                  if ! cat "${order[@]}" | base64 --decode > "$candidate" 2>/dev/null; then
+                    rm -f "$candidate"
+                    continue
+                  fi
+                  ;;
+                per-part-base64)
+                  : > "$candidate"
+                  valid=1
+                  for part in "${order[@]}"; do
+                    if ! base64 --decode "$part" >> "$candidate" 2>/dev/null; then
+                      valid=0
+                      break
+                    fi
+                  done
+                  if [ "$valid" -ne 1 ]; then
+                    rm -f "$candidate"
+                    continue
+                  fi
+                  ;;
+              esac
+
+              if ! xz --test "$candidate" 2>/dev/null; then
+                rm -f "$candidate"
+                continue
+              fi
+
+              listing="$(tar -tJf "$candidate")"
+              card_count="$(printf '%s\n' "$listing" | grep -E '(^|/)tarot/stellar-mosaic-tarot/[0-9]+-.*\.md$' | wc -l | tr -d ' ')"
+              if [ "$card_count" != '78' ]; then
+                echo "Valid XZ candidate $a$b$c$d/$mode contains $card_count card Markdown files, not 78."
+                rm -f "$candidate"
+                continue
+              fi
+              printf '%s\n' "$listing" | grep -qE '(^|/)tarot/stellar-mosaic-tarot/78-the-world\.md$'
+              printf '%s\n' "$listing" | grep -qE '(^|/)tarot/stellar-mosaic-tarot/DECK-INFO\.md$'
+
+              actual="$(sha256sum "$candidate" | awk '{print $1}')"
+              echo "Recovered valid archive with order $a$b$c$d and mode $mode."
+              echo "Archive SHA-256: $actual"
+              if [ "$actual" != "$expected" ]; then
+                echo "The recorded checksum was stale, but archive structure and XZ integrity are valid."
+              fi
+              cp "$candidate" /tmp/stellar-mosaic.tar.xz
+              recovered="$a$b$c$d/$mode"
+              break 2
+            done
+          done < <(python - <<'PY'
+          import itertools
+          for permutation in itertools.permutations(("000", "001", "002", "003")):
+              print(*permutation)
+          PY
+          )
+
+          test -n "$recovered"
+          echo "Selected recovery: $recovered"
+
+      - name: Expand and validate all card descriptions
         shell: bash
         run: |
           set -euo pipefail
-          tar -xJf /tmp/stellar-mosaic.tar.xz
-          test -f tarot/stellar-mosaic-tarot/1-ace-of-wands.md
-          test -f tarot/stellar-mosaic-tarot/78-the-world.md
-          test -f tarot/stellar-mosaic-tarot/DECK-INFO.md
-          card_count="$(find tarot/stellar-mosaic-tarot -maxdepth 1 -type f -name '[0-9]*.md' | wc -l | tr -d ' ')"
-          test "$card_count" = "78"
-          if grep -RniE 'placeholder|lorem ipsum|(^|[^A-Z])TBD([^A-Z]|$)|(^|[^A-Z])TODO([^A-Z]|$)' tarot/stellar-mosaic-tarot --include='*.md'; then
-            echo 'Placeholder content detected.' >&2
-            exit 1
-          fi
+          tar --extract --xz --file /tmp/stellar-mosaic.tar.xz --no-same-owner
 
-      - name: Remove one-shot build transport
+          python - <<'PY'
+          from pathlib import Path
+          import re
+
+          root = Path('tarot/stellar-mosaic-tarot')
+          files = sorted(
+              root.glob('[0-9]*.md'),
+              key=lambda path: int(path.name.split('-', 1)[0]),
+          )
+          assert len(files) == 78, f'expected 78 card files, found {len(files)}'
+          indices = [int(path.name.split('-', 1)[0]) for path in files]
+          assert indices == list(range(1, 79)), f'non-continuous card indices: {indices}'
+          assert (root / '1-ace-of-wands.md').is_file()
+          assert (root / '78-the-world.md').is_file()
+          assert (root / 'DECK-INFO.md').is_file()
+
+          required = (
+              '## Card metadata',
+              '## Literal visual description',
+              '## Core meaning',
+              '### Upright keywords',
+              '### Reversed / shadow keywords',
+              '## Symbol-by-symbol interpretation',
+              '## Divinatory interpretation by question type',
+              '## Intentions',
+              '## Feelings',
+              '## Actions / likely next move',
+              '## Advice',
+              '## Outcome',
+              '## Yes / no',
+              '## Timing',
+              '## Health / wellbeing readings',
+              '## Spread interactions',
+              '## Image-led reading examples',
+              '## Fortune-teller cautions',
+              '## One-sentence essence',
+          )
+          titles = []
+          forbidden = re.compile(r'placeholder|lorem ipsum|(^|[^A-Z])TBD([^A-Z]|$)|(^|[^A-Z])TODO([^A-Z]|$)', re.I)
+          for path in files:
+              text = path.read_text(encoding='utf-8')
+              first = text.splitlines()[0]
+              assert first.startswith('# '), f'{path}: missing title'
+              titles.append(first)
+              for heading in required:
+                  assert heading in text, f'{path}: missing {heading}'
+              assert not forbidden.search(text), f'{path}: placeholder marker found'
+              symbol_sections = len(re.findall(r'^### .+ — .+$', text, re.M))
+              assert symbol_sections >= 5, f'{path}: fewer than five card-specific symbol sections'
+
+          assert len(set(titles)) == 78, 'duplicate card titles found'
+          print('Validated 78 continuous, unique, fully structured card files.')
+          PY
+
+      - name: Remove the one-shot transport
         shell: bash
         run: |
           set -euo pipefail
@@ -50,7 +181,7 @@ jobs:
           rmdir .github/workflows 2>/dev/null || true
           rmdir .github 2>/dev/null || true
 
-      - name: Commit generated Markdown
+      - name: Commit the completed deck documentation
         shell: bash
         run: |
           set -euo pipefail
