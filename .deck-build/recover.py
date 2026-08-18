@@ -12,7 +12,7 @@ from pathlib import Path
 
 TARGET_SHA256 = "c5dd8815d7c2f80d4d142c3bff6dff251ca225f60800506076bdc71b51f01676"
 XZ_MAGIC = b"\xfd7zXZ\x00"
-MAX_NODES = 200_000
+MAX_NODES = 500_000
 BASE64_ALPHABET = bytes(
     dict.fromkeys(b"dABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/")
 )
@@ -82,7 +82,7 @@ def inspect_encoded(encoded: bytes) -> tuple[str, bytes | None]:
 
 
 def reconstruct(
-    chunks: dict[str, bytes], damaged: set[str], start: str, repair_mode: str
+    chunks: dict[str, bytes], damaged: set[str], start: str
 ) -> tuple[tuple[tuple[str, str | None], ...], bytes] | None:
     visited = [0]
     accepted = [0]
@@ -95,6 +95,18 @@ def reconstruct(
         return ((start, None),), root_archive  # pragma: no cover
 
     remaining = tuple(name for name in chunks if name != start)
+
+    def variants(name: str) -> tuple[tuple[bytes, str | None], ...]:
+        raw = chunks[name]
+        if name not in damaged:
+            return ((raw, None),)
+
+        repaired: list[tuple[bytes, str]] = []
+        for char in BASE64_ALPHABET:
+            text = chr(char)
+            repaired.append((bytes((char,)) + raw, f"prepend:{text}"))
+            repaired.append((raw + bytes((char,)), f"append:{text}"))
+        return tuple(repaired)
 
     def search(
         encoded: bytes,
@@ -114,29 +126,10 @@ def reconstruct(
             ),
         )
         for name in choices:
-            raw = chunks[name]
-            repairs: tuple[int | None, ...]
-            if name in damaged:
-                repairs = tuple(BASE64_ALPHABET)
-            else:
-                repairs = (None,)
-
-            for repair in repairs:
-                if repair is None:
-                    piece = raw
-                    repair_text = None
-                elif repair_mode == "append":
-                    piece = raw + bytes((repair,))
-                    repair_text = chr(repair)
-                elif repair_mode == "prepend":
-                    piece = bytes((repair,)) + raw
-                    repair_text = chr(repair)
-                else:  # pragma: no cover
-                    raise AssertionError(repair_mode)
-
+            for piece, repair_text in variants(name):
                 candidate = encoded + piece
                 status, archive = inspect_encoded(candidate)
-                if status == "invalid" or status == "complete-wrong-hash":
+                if status in {"invalid", "complete-wrong-hash"}:
                     continue
 
                 accepted[0] += 1
@@ -150,7 +143,7 @@ def reconstruct(
                     assert archive is not None
                     print(
                         f"Matched after {visited[0]} search nodes and "
-                        f"{accepted[0]} accepted prefixes using {repair_mode} repair."
+                        f"{accepted[0]} accepted prefixes."
                     )
                     return next_order, archive
 
@@ -162,7 +155,7 @@ def reconstruct(
 
     result = search(start_encoded, ((start, None),), remaining)
     print(
-        f"Mode {repair_mode!r} exhausted after {visited[0]} nodes and "
+        f"Mixed-boundary search exhausted after {visited[0]} nodes and "
         f"{accepted[0]} accepted prefixes."
     )
     return result
@@ -259,11 +252,9 @@ def main() -> None:
     if expected_length != 131_000:
         raise RuntimeError(f"Unexpected repaired payload length: {expected_length}")
 
-    result = reconstruct(chunks, damaged, start, "append")
+    result = reconstruct(chunks, damaged, start)
     if result is None:
-        result = reconstruct(chunks, damaged, start, "prepend")
-    if result is None:
-        raise RuntimeError("No checksum-valid XZ archive was found after bounded boundary repair.")
+        raise RuntimeError("No checksum-valid XZ archive was found after mixed boundary repair.")
 
     order, archive = result
     Path("/tmp/stellar-mosaic.tar.xz").write_bytes(archive)
