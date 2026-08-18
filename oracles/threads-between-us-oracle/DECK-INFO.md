@@ -4,7 +4,7 @@
 
 **Deck name:** Threads Between Us Oracle  
 **Deck family:** Oracle  
-**Status:** In development — deck specification and complete 60-card list established; detailed Markdown descriptions exist for cards 1–30  
+**Status:** In development — deck specification and complete 60-card list established; detailed Markdown descriptions exist for cards 1–40  
 **Planned structure:** 60 numbered cards with no suits, arranged as a continuous relational journey from recognition and meeting context through bonding, alignment, friction, boundaries, endings, and changed possibilities  
 **Primary reading style:** image-led intuitive relationship divination that distinguishes who a person may be, how people may know each other, what form a bond is taking, how compatible its energies are, what purpose it may serve, and where the present pattern is likely to lead.
 
@@ -160,9 +160,9 @@ The current deck folder contains:
 
 - `DECK-INFO.md` — the deck identity, visual system, reading method, and card-file standard;
 - `CARDS.md` — the authoritative planned 60-card sequence and short descriptions;
-- detailed individual Markdown descriptions for cards **1–30**.
+- detailed individual Markdown descriptions for cards **1–40**.
 
-Cards **31–60** do not yet have individual card-specific Markdown files. Artwork files are produced and managed independently and may be added, replaced, or removed while the card descriptions are being developed.
+Cards **41–60** do not yet have individual card-specific Markdown files. Artwork files are produced and managed independently and may be added, replaced, or removed while the card descriptions are being developed.
 
 Current card-description files:
 
@@ -196,6 +196,16 @@ Current card-description files:
 - `28-the-compass.md`
 - `29-the-anchor.md`
 - `30-the-kite-string.md`
+- `31-the-seed-exchange.md`
+- `32-the-north-star.md`
+- `33-crossed-paths.md`
+- `34-parallel-tracks.md`
+- `35-opposite-shores.md`
+- `36-the-returning-tide.md`
+- `37-the-unsent-letter.md`
+- `38-the-masked-ball.md`
+- `39-the-glass-wall.md`
+- `40-the-locked-room.md`
 
 Each completed card should ultimately be represented by:
 
