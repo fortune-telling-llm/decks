@@ -8,11 +8,11 @@
 - **Element:** Fire
 - **Repository sequence number:** 26
 - **Formal number:** 4
-- **Printed title:** `FOUR of WANDS.`
+- **Printed inscription:** Roman numeral `IV` at the top; no printed card title appears on the face
 - **Primary polarity:** stabilizing, celebratory, communal, welcoming
 - **Later esoteric correspondence:** Venus in Aries, traditionally titled Completion or Perfected Work; these attributions are not printed on the card
 - **Core theme:** living energy has been arranged into a stable threshold where achievement can be shared, welcomed, inhabited, and temporarily celebrated
-- **Artwork status:** this description targets Pamela Colman Smith’s first 1909 Roses & Lilies design. Any uploaded scan must be checked for edition, cropping, color, restoration, wear, and small print differences before the literal description is treated as synchronized.
+- **Artwork status:** this description targets Pamela Colman Smith’s first 1909 Roses & Lilies design. Any uploaded scan must be checked for edition, cropping, color, restoration, wear, numeral form, and small print differences before the literal description is treated as synchronized.
 
 ## Literal visual description
 
@@ -491,7 +491,7 @@ The card may show that achievement has been treated as private labor rather than
 - Do not ignore the practical bridge, labor, cost, and access required to create hospitality.
 - Preserve Waite’s unusually favorable reversed range rather than mechanically negating the card.
 - Keep Venus-in-Aries and Completion identified as later overlays rather than printed evidence.
-- Verify the figures, garland contents, bridge, moat, building, and colors against the exact 1909 scan selected for the repository.
+- Verify the Roman numeral, figures, garland contents, bridge, moat, building, and colors against the exact 1909 scan selected for the repository.
 
 ## One-sentence essence
 
