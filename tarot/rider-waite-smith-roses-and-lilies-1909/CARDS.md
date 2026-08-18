@@ -4,7 +4,7 @@ This file defines the historical **78-card** sequence documented for Rider–Wai
 
 The table uses stable repository sequence numbers while preserving historical card numbers, titles, ranks, and edition-specific exceptions inside the card name or description. Short descriptions identify each card’s primary visual or structural role; they are not substitutes for the detailed image-led card files.
 
-Detailed card-specific Markdown files now exist for cards **1–64**: all **22 Major Arcana**, the complete **14-card suit of Wands**, the complete **14-card suit of Cups**, and the complete **14-card suit of Swords**. Cards **65–78**, comprising the suit of Pentacles, remain index entries awaiting detailed card files. Artwork is produced and managed separately from this Markdown status record.
+Detailed card-specific Markdown files now exist for **all cards 1–78**: all **22 Major Arcana** and the complete **14-card suits of Wands, Cups, Swords, and Pentacles**. This completes the planned Markdown card-description set for this historical deck. Artwork is produced and managed separately from this Markdown status record.
 
 The sequence follows the 22 Major Arcana from `0` through `XXI`, then Wands, Cups, Swords, and Pentacles from Ace through King. Strength is `VIII` and Justice is `XI`, as in Waite’s ordering.
 
@@ -76,17 +76,17 @@ For the original 1909 faces, numbered pip cards `2–10` display Roman numerals 
 | 62 | **Knight of Swords** | An armored rider charges on a pale horse with raised blade through storm-driven clouds, birds, and bent trees; speed, confrontation, courage, and reduced braking distance. |
 | 63 | **Queen of Swords** | A profile queen raises an upright sword and extends an open hand beneath winged motifs, clouds, and a distant bird; discernment, testimony, boundary, and grief-shaped clarity. |
 | 64 | **King of Swords** | A crowned king sits frontally with an upright sword on a carved throne beneath birds and moving cloud; judgment, law, strategy, authority, and accountable command. |
-| 65 | **Ace of Pentacles** | A fully illustrated scene: hand offers a pentacle above a garden path; material opportunity, body, work, and tangible beginning. |
-| 66 | **Two of Pentacles** | A fully illustrated scene: figure juggles coins within an infinity loop; adaptation, budgeting, rhythm, and changing demands. |
-| 67 | **Three of Pentacles** | A fully illustrated scene: craftsperson and patrons confer beneath an arch; skill, teamwork, planning, and recognition. |
-| 68 | **Four of Pentacles** | A fully illustrated scene: seated figure tightly holds four coins; security, possession, control, and fear of loss. |
-| 69 | **Five of Pentacles** | A fully illustrated scene: two struggling figures pass a lit window in snow; hardship, exclusion, need, and nearby support. |
-| 70 | **Six of Pentacles** | A fully illustrated scene: merchant distributes coins while holding scales; generosity, debt, patronage, and unequal exchange. |
-| 71 | **Seven of Pentacles** | A fully illustrated scene: worker pauses beside a growing crop; assessment, patience, investment, and delayed return. |
-| 72 | **Eight of Pentacles** | A fully illustrated scene: craftsperson repeatedly engraves coins; practice, diligence, apprenticeship, and improving skill. |
-| 73 | **Nine of Pentacles** | A fully illustrated scene: richly dressed figure stands in a vineyard with falcon; independence, harvest, boundaries, and comfort. |
-| 74 | **Ten of Pentacles** | A fully illustrated scene: generations gather beneath an arch marked with coins; inheritance, family system, property, and continuity. |
-| 75 | **Page of Pentacles** | A fully illustrated scene: young figure studies a pentacle in a fertile field; study, offer, practical curiosity, and emerging resource. |
-| 76 | **Knight of Pentacles** | A fully illustrated scene: still rider holds a pentacle above worked land; reliability, routine, patience, and slow progress. |
-| 77 | **Queen of Pentacles** | A fully illustrated scene: queen cradles a pentacle in a garden; practical care, embodiment, provision, and stewardship. |
-| 78 | **King of Pentacles** | A fully illustrated scene: ruler sits amid vines, bulls, and a city; material mastery, enterprise, stability, and stewardship. |
+| 65 | **Ace of Pentacles** | A cloud-borne hand offers one golden pentacle above lilies, cultivated garden, flowering arch, path, and distant mountains; material opportunity, access, stewardship, and embodied beginning. |
+| 66 | **Two of Pentacles** | A brightly dressed figure coordinates two pentacles inside a green infinity loop while two ships ride high waves; adaptation, cash flow, divided priorities, and active rhythm. |
+| 67 | **Three of Pentacles** | A craftsperson with tools consults two robed figures and a plan beneath three pentacles integrated into carved stone; skill, collaboration, review, and accountable workmanship. |
+| 68 | **Four of Pentacles** | A crowned seated figure holds one pentacle at the chest, bears one at the head, and pins two beneath the feet before a distant city; security, possession, control, and restricted circulation. |
+| 69 | **Five of Pentacles** | Two exposed figures move through snow beside a dark wall and luminous stained-glass window containing five pentacles; hardship, exclusion, mutual endurance, and inaccessible support. |
+| 70 | **Six of Pentacles** | A standing figure distributes coins to two kneeling recipients while holding scales beneath six pentacles; aid, payment, hierarchy, measurement, and dignity in exchange. |
+| 71 | **Seven of Pentacles** | A worker leans on a long-handled tool while assessing a green crop bearing seven pentacles; investment, delayed return, fatigue, and evidence-based continuation. |
+| 72 | **Eight of Pentacles** | A seated craftsperson shapes one pentacle while six are displayed and another rests near the feet; practice, employment, iteration, quality, and mastery in progress. |
+| 73 | **Nine of Pentacles** | A richly dressed figure stands among nine pentacles and grapevines with a falcon, glove, snail, and distant estate; cultivated autonomy, discernment, comfort, and supported independence. |
+| 74 | **Ten of Pentacles** | Elder, adults, child, and two dogs gather beneath a stone arch and ten-pentacle network before a prosperous town; legacy, family or institution, property, succession, and systemic wealth. |
+| 75 | **Page of Pentacles** | A focused Page holds one pentacle with both hands amid green field, furrows, trees, and distant mountains; study, application, practical message, and emerging Earth. |
+| 76 | **Knight of Pentacles** | An armored rider holds a pentacle on a stationary dark horse before cultivated fields and a broad horizon; reliability, routine, responsibility, and movement governed by threshold. |
+| 77 | **Queen of Pentacles** | A crowned Queen cradles a pentacle on a carved throne amid roses, dense garden, rabbit, and distant mountains; embodied stewardship, practical care, habitat, and sustainable provision. |
+| 78 | **King of Pentacles** | A crowned King holds scepter and pentacle on a bull-carved throne amid grapes, vines, and fortified estate; enterprise, property, material authority, and accountable stewardship. |
