@@ -8,11 +8,11 @@
 - **Element:** Fire
 - **Repository sequence number:** 29
 - **Formal number:** 7
-- **Printed title:** `SEVEN of WANDS.`
+- **Printed inscription:** Roman numeral `VII` at the top; no printed card title appears on the face
 - **Primary polarity:** defensive, courageous, pressured, position-holding
 - **Later esoteric correspondence:** Mars in Leo, traditionally titled Valour; these attributions are not printed on the card
 - **Core theme:** one person or position faces multiple pressures from an exposed but advantageous place, requiring courage, boundaries, prioritization, and a decision about what is genuinely worth defending
-- **Artwork status:** this description targets Pamela Colman Smith’s first 1909 Roses & Lilies design. Any uploaded scan must be checked for edition, cropping, color, restoration, wear, and small print differences before the literal description is treated as synchronized.
+- **Artwork status:** this description targets Pamela Colman Smith’s first 1909 Roses & Lilies design. Any uploaded scan must be checked for edition, cropping, color, restoration, wear, numeral form, and small print differences before the literal description is treated as synchronized.
 
 ## Literal visual description
 
@@ -463,7 +463,7 @@ The card favors persistence when the ground reflects a real value and the cost r
 - Do not ignore power differences represented by the elevated position.
 - Do not assume courage requires permanent vigilance.
 - Keep Mars-in-Leo and Valour identified as later overlays rather than printed evidence.
-- Verify footwear, clothing colors, terrain, wand count, angles, and leaves against the exact 1909 scan selected for the repository.
+- Verify the Roman numeral, footwear, clothing colors, terrain, wand count, angles, and leaves against the exact 1909 scan selected for the repository.
 
 ## One-sentence essence
 
