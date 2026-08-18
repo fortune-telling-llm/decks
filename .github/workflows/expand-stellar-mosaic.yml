@@ -6,14 +6,8 @@ on:
       - feat/stellar-mosaic-tarot-card-descriptions
     paths:
       - .deck-build/READY
-  pull_request:
-    branches:
-      - main
-      - feat/stellar-mosaic-tarot-card-descriptions
-    paths:
-      - .deck-build/READY
       - .deck-build/TRIGGER
-      - .deck-build/payload.part-*
+      - .deck-build/candidates/**
       - .github/workflows/expand-stellar-mosaic.yml
 
 permissions:
@@ -23,112 +17,142 @@ jobs:
   expand:
     runs-on: ubuntu-latest
     steps:
-      - name: Check out feature content
+      - name: Check out the recovery branch
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
-          ref: ${{ github.head_ref || github.ref_name }}
+          ref: ${{ github.ref_name }}
 
-      - name: Recover and verify the staged payload
+      - name: Reconstruct and verify the preserved archive
         shell: bash
         run: |
           set -euo pipefail
-          shopt -s nullglob
+          python3 - <<'PY'
+          from __future__ import annotations
 
-          parts=(.deck-build/payload.part-*)
-          test "${#parts[@]}" -eq 4
+          import base64
+          import binascii
+          import hashlib
+          import lzma
+          import sys
+          from pathlib import Path
 
-          echo 'Staged payload objects:'
-          for part in "${parts[@]}"; do
-            printf '%s: ' "$part"
-            wc -c < "$part" | tr -d '\n'
-            printf ' bytes; first 16 bytes: '
-            head -c 16 "$part" | xxd -p -c 16
-          done
+          TARGET_SHA256 = 'c5dd8815d7c2f80d4d142c3bff6dff251ca225f60800506076bdc71b51f01676'
+          XZ_MAGIC = b'\xfd7zXZ\x00'
+          MAX_NODES = 250_000
 
-          expected='c5dd8815d7c2f80d4d142c3bff6dff251ca225f60800506076bdc71b51f01676'
-          recovered=''
+          paths = sorted(Path('.deck-build').glob('payload.part-*'))
+          paths += sorted(Path('.deck-build/candidates').glob('*'))
+          if not paths:
+              raise SystemExit('No preserved payload chunks were found.')
 
-          while read -r a b c d; do
-            order=(
-              ".deck-build/payload.part-$a"
-              ".deck-build/payload.part-$b"
-              ".deck-build/payload.part-$c"
-              ".deck-build/payload.part-$d"
-            )
+          chunks: dict[str, bytes] = {}
+          for path in paths:
+              data = b''.join(path.read_bytes().split())
+              if not data:
+                  raise SystemExit(f'Empty payload chunk: {path}')
+              chunks[path.as_posix()] = data
 
-            for mode in raw concatenated-base64 per-part-base64; do
-              candidate="/tmp/candidate-${a}${b}${c}${d}-${mode}.tar.xz"
-              rm -f "$candidate"
+          print('Preserved chunks:')
+          for name, data in chunks.items():
+              print(f'  {name}: {len(data)} bytes; prefix={data[:16]!r}; suffix={data[-16:]!r}')
 
-              case "$mode" in
-                raw)
-                  cat "${order[@]}" > "$candidate"
-                  ;;
-                concatenated-base64)
-                  if ! cat "${order[@]}" | base64 --decode > "$candidate" 2>/dev/null; then
-                    rm -f "$candidate"
-                    continue
-                  fi
-                  ;;
-                per-part-base64)
-                  : > "$candidate"
-                  valid=1
-                  for part in "${order[@]}"; do
-                    if ! base64 --decode "$part" >> "$candidate" 2>/dev/null; then
-                      valid=0
-                      break
-                    fi
-                  done
-                  if [ "$valid" -ne 1 ]; then
-                    rm -f "$candidate"
-                    continue
-                  fi
-                  ;;
-              esac
+          starts = [name for name, data in chunks.items() if data.startswith(b'/Td6WFoAA')]
+          if len(starts) != 1:
+              raise SystemExit(f'Expected one XZ/base64 opening chunk, found {starts!r}.')
+          start = starts[0]
+          remaining = tuple(name for name in chunks if name != start)
+          visited = 0
 
-              if ! xz --test "$candidate" 2>/dev/null; then
-                rm -f "$candidate"
-                continue
-              fi
+          def encoded_for(order: tuple[str, ...]) -> bytes:
+              return b''.join(chunks[name] for name in order)
 
-              listing="$(tar -tJf "$candidate")"
-              card_count="$(printf '%s\n' "$listing" | grep -E '(^|/)tarot/stellar-mosaic-tarot/[0-9]+-.*\.md$' | wc -l | tr -d ' ')"
-              if [ "$card_count" != '78' ]; then
-                echo "Valid XZ candidate $a$b$c$d/$mode contains $card_count card Markdown files, not 78."
-                rm -f "$candidate"
-                continue
-              fi
-              printf '%s\n' "$listing" | grep -qE '(^|/)tarot/stellar-mosaic-tarot/78-the-world\.md$'
-              printf '%s\n' "$listing" | grep -qE '(^|/)tarot/stellar-mosaic-tarot/DECK-INFO\.md$'
+          def inspect(order: tuple[str, ...]) -> tuple[str, bytes | None]:
+              encoded = encoded_for(order)
+              usable = len(encoded) - (len(encoded) % 4)
+              if usable < 12:
+                  return 'prefix', None
+              try:
+                  decoded_prefix = base64.b64decode(encoded[:usable], validate=True)
+              except (binascii.Error, ValueError):
+                  return 'invalid', None
+              if not decoded_prefix.startswith(XZ_MAGIC):
+                  return 'invalid', None
 
-              actual="$(sha256sum "$candidate" | awk '{print $1}')"
-              echo "Recovered valid archive with order $a$b$c$d and mode $mode."
-              echo "Archive SHA-256: $actual"
-              if [ "$actual" != "$expected" ]; then
-                echo "The recorded checksum was stale, but archive structure and XZ integrity are valid."
-              fi
-              cp "$candidate" /tmp/stellar-mosaic.tar.xz
-              recovered="$a$b$c$d/$mode"
-              break 2
-            done
-          done < <(python - <<'PY'
-          import itertools
-          for permutation in itertools.permutations(("000", "001", "002", "003")):
-              print(*permutation)
+              decompressor = lzma.LZMADecompressor(format=lzma.FORMAT_XZ)
+              try:
+                  decompressor.decompress(decoded_prefix)
+              except (lzma.LZMAError, EOFError):
+                  return 'invalid', None
+
+              if not decompressor.eof:
+                  return 'prefix', None
+
+              try:
+                  full = base64.b64decode(encoded, validate=True)
+              except (binascii.Error, ValueError):
+                  return 'invalid', None
+              if hashlib.sha256(full).hexdigest() != TARGET_SHA256:
+                  return 'invalid', None
+              try:
+                  lzma.decompress(full, format=lzma.FORMAT_XZ)
+              except lzma.LZMAError:
+                  return 'invalid', None
+              return 'match', full
+
+          def search(order: tuple[str, ...], unused: tuple[str, ...]) -> tuple[tuple[str, ...], bytes] | None:
+              nonlocal_visited[0] += 1
+              count = nonlocal_visited[0]
+              if count > MAX_NODES:
+                  raise RuntimeError(f'Reconstruction exceeded {MAX_NODES} search nodes.')
+              if count % 5000 == 0:
+                  print(f'Checked {count} candidate prefixes...', flush=True)
+
+              status, archive = inspect(order)
+              if status == 'match':
+                  assert archive is not None
+                  return order, archive
+              if status == 'invalid':
+                  return None
+
+              choices = sorted(unused, key=lambda name: (len(chunks[name]) < 100, name))
+              for name in choices:
+                  next_unused = tuple(item for item in unused if item != name)
+                  result = search(order + (name,), next_unused)
+                  if result is not None:
+                      return result
+              return None
+
+          nonlocal_visited = [visited]
+          result = search((start,), remaining)
+          if result is None:
+              raise SystemExit(
+                  f'No ordered subset of the {len(chunks)} preserved chunks matched {TARGET_SHA256}.'
+              )
+
+          order, archive = result
+          output = Path('/tmp/stellar-mosaic.tar.xz')
+          output.write_bytes(archive)
+          actual = hashlib.sha256(archive).hexdigest()
+          print(f'Reconstructed archive after {nonlocal_visited[0]} prefix checks.')
+          print(f'Archive size: {len(archive)} bytes')
+          print(f'Archive SHA-256: {actual}')
+          print('Selected chunk order:')
+          for index, name in enumerate(order):
+              print(f'  {index:02d}: {name}')
+          assert actual == TARGET_SHA256
           PY
-          )
 
-          test -n "$recovered"
-          echo "Selected recovery: $recovered"
+          xz --test /tmp/stellar-mosaic.tar.xz
+          tar -tJf /tmp/stellar-mosaic.tar.xz | sed -n '1,12p'
 
-      - name: Expand and validate all card descriptions
+      - name: Expand and validate every card description
         shell: bash
         run: |
           set -euo pipefail
           tar --extract --xz --file /tmp/stellar-mosaic.tar.xz --no-same-owner
 
-          python - <<'PY'
+          python3 - <<'PY'
           from pathlib import Path
           import re
 
@@ -165,8 +189,11 @@ jobs:
               '## Fortune-teller cautions',
               '## One-sentence essence',
           )
-          titles = []
-          forbidden = re.compile(r'placeholder|lorem ipsum|(^|[^A-Z])TBD([^A-Z]|$)|(^|[^A-Z])TODO([^A-Z]|$)', re.I)
+          forbidden = re.compile(
+              r'placeholder|lorem ipsum|(^|[^A-Z])TBD([^A-Z]|$)|(^|[^A-Z])TODO([^A-Z]|$)',
+              re.I,
+          )
+          titles: list[str] = []
           for path in files:
               text = path.read_text(encoding='utf-8')
               first = text.splitlines()[0]
@@ -179,10 +206,15 @@ jobs:
               assert symbol_sections >= 5, f'{path}: fewer than five card-specific symbol sections'
 
           assert len(set(titles)) == 78, 'duplicate card titles found'
+          assert sum(1 for path in files if '-of-wands.md' in path.name) == 14
+          assert sum(1 for path in files if '-of-cups.md' in path.name) == 14
+          assert sum(1 for path in files if '-of-swords.md' in path.name) == 14
+          assert sum(1 for path in files if '-of-pentacles.md' in path.name) == 14
+          assert len(files) - 56 == 22
           print('Validated 78 continuous, unique, fully structured card files.')
           PY
 
-      - name: Remove the one-shot transport
+      - name: Remove the one-shot recovery transport
         shell: bash
         run: |
           set -euo pipefail
