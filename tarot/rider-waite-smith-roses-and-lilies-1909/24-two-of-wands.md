@@ -8,11 +8,11 @@
 - **Element:** Fire
 - **Repository sequence number:** 24
 - **Formal number:** 2
-- **Printed title:** `TWO of WANDS.`
+- **Printed inscription:** Roman numeral `II` at the top; no printed card title appears on the face
 - **Primary polarity:** contained, surveying, choosing, outward-looking
 - **Later esoteric correspondence:** Mars in Aries, traditionally titled Dominion; these attributions are not printed on the card
 - **Core theme:** possessing real power or potential while confronting the distance between present control and the larger world one could enter
-- **Artwork status:** this description targets Pamela Colman Smith’s first 1909 Roses & Lilies design. Any uploaded scan must be checked for edition, cropping, color, restoration, wear, and small print differences before the literal description is treated as synchronized.
+- **Artwork status:** this description targets Pamela Colman Smith’s first 1909 Roses & Lilies design. Any uploaded scan must be checked for edition, cropping, color, restoration, wear, numeral form, and small print differences before the literal description is treated as synchronized.
 
 ## Literal visual description
 
@@ -485,7 +485,7 @@ The figure has status, security, and symbolic possession of the world, yet looks
 - Do not assume that power or wealth removes sadness, responsibility, or limitation.
 - Do not call control “leadership” when other people have no voice in the plan.
 - Keep Mars-in-Aries and Dominion identified as later overlays rather than printed evidence.
-- Verify the rose, cross, lily, wall, color, and landscape details against the exact 1909 scan selected for the repository.
+- Verify the Roman numeral, rose, cross, lily, wall, color, and landscape details against the exact 1909 scan selected for the repository.
 
 ## One-sentence essence
 
